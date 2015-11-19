@@ -10,7 +10,6 @@ angular.module('annons-analys')
 		$scope.removeUrl = function (index) {
 			$scope.urls.splice(index, 1);
 		};
-<<<<<<< HEAD
 
 		$http({
 			url: '/v1/urls/getTitle',
@@ -20,7 +19,4 @@ angular.module('annons-analys')
 		}).error(function (status) {
 			$scope.status = status;
 		});
-
-=======
->>>>>>> 0e9cfbc6b5973c19b242398e86e884a153b59bb0
 	});

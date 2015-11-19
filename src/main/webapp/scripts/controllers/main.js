@@ -19,5 +19,4 @@ angular.module('annons-analys')
 		}).error(function (status) {
 			$scope.status = status;
 		});
-
 	});
