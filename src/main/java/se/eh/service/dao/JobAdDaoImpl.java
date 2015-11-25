@@ -8,10 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-/**
- * Created by hssen on 11/19/15.
- */
-public class JobAdDaoImpl {
+public final class JobAdDaoImpl {
 
     private Connection connection;
     private Statement statement;
@@ -19,7 +16,6 @@ public class JobAdDaoImpl {
 
     public JobAd getAllUrls() throws SQLException {
         Properties properties = new Properties();
-        List<JobAd> urls = new ArrayList<>();
 
 
         try {
@@ -55,6 +51,8 @@ public class JobAdDaoImpl {
             this.close();
         }
     }
+
+
 
     private void close() throws SQLException {
         try {

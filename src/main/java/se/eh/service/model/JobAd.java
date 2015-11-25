@@ -6,12 +6,16 @@ import javax.xml.bind.annotation.XmlElement;
 import java.io.Serializable;
 
 @XmlAccessorType(XmlAccessType.NONE)
-public class JobAd implements Serializable{
+public final class JobAd implements Serializable{
 
     @XmlElement(name="url")
     private String url;
 
     public JobAd() {
+    }
+
+    public JobAd(String url) {
+        this.url = url;
     }
 
     public String getUrl() {
