@@ -6,7 +6,6 @@ import se.eh.service.dao.JobAdDaoImpl;
 import se.eh.spring.model.JobAds;
 import se.eh.spring.service.JobAdsService;
 
-import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
@@ -16,13 +15,12 @@ import java.io.IOException;
 import java.net.URI;
 import java.sql.SQLException;
 
-@Consumes("application/json")
-@Produces("application/json")
 @Path("/urls")
+@Produces({MediaType.APPLICATION_JSON})
+@Consumes({MediaType.APPLICATION_JSON})
 public final class JobAdResource {
 
-    @Inject
-    JobAdsService jobAdsService;
+    private JobAdsService jobAdsService = new JobAdsService();
 
     private String title;
     private Document document;

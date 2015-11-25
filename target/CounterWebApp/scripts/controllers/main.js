@@ -1,22 +1,11 @@
 'use strict';
 
 angular.module('annons-analys')
-	.controller('MainCtrl', function ($scope, $http) {
-		$scope.urls = [];
-		$scope.addUrl = function () {
-			$scope.urls.push($scope.url);
-			$scope.url = '';
-		};
-		$scope.removeUrl = function (index) {
-			$scope.urls.splice(index, 1);
-		};
+	.controller('MainCtrl', function ($scope, myFactory) {
+		$scope.url = {};
 
-		$http({
-			url: '/v1/urls/getTitle',
-			method: "GET",
-		}).success(function (data) {
-			$scope.data = data;
-		}).error(function (status) {
-			$scope.status = status;
-		});
+		$scope.sendForm = function() {
+			myFactory.addUrl($scope.url);
+				console.log($scope.url);
+		}
 	});

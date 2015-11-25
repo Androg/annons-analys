@@ -3,10 +3,9 @@ package se.eh.spring.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="urls")
-public final class JobAds {
+public final class JobAds extends AbstractEntity {
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String url;
 
     public JobAds(String url) {

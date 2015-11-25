@@ -1,32 +1,17 @@
-<div class="container" id="main">
-  <input type="image" name="image" src="./images/spartan_pantheon__by_huskywong-d6klr1f.jpg" width="500">
-</div>
-
-<p>Job post</p>
 <div class="container">
-<!----Job-input-->
+  <input id="image" type="image" name="Cruited" src="images/Cruited.png">
+</div>
 
-<form role="form" ng-submit="addUrl()">
-  <div class="row col-sm-10">
-    <input type="url" class="form-control" placeholder="url">
-    </input>
-      <a>Don't have a job post?</a>
+<div class="container" id="url">
+  <div  id="jobPost">
+    <form name="jobPostForm" ng-submit="sendForm()">
+      <div class="form-group">
+        <label for="jobPost">Job Post</label>
+        <input name="url" type="text" class="form-control input-sm" ng-model="url.url" required/>
+        <p class="alert alert-danger" ng-show="jobPostForm.url.$error.required && JobPostForm.url.$dirty" class="alert alert-warning">
+          Required</p>
+      </div>
+      <input type="submit" class="btn btn-primary btn-sm btn-block" ng-disabled="jobPostForm.$dirty && jobPostForm.$invalid" />
+    </form>
   </div>
-</form>
-</div>
-<!---Job-List-->
-
-<div class="hero-unit">
-  <h7>Server says : {{data}}</h7>
-  <h7>Server says : {{status}}</h7>
-</div>
-
-</br>
-</br>
-</br>
-</br>
-
-<!---Button-Start-->
-<div class="container col-sm-10">
-  <button class="btn col-sm-3" ng-click="sendForm()">Start</button>
 </div>
