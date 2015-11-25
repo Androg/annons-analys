@@ -1,7 +1,9 @@
-$icon-font-path: "styles/fonts.bootstrap/bootstrap/";
+$icon-font-path: "styles/fonts/bootstrap/";
 // bower:scss
-@import "stylesheets/_bootstrap.scss";
+@import "../assets/bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "_global";
 // endbower
+
 
 .browsehappy {
   margin: 0.2em 0;
@@ -11,32 +13,7 @@ $icon-font-path: "styles/fonts.bootstrap/bootstrap/";
 }
 
 body {
-  padding: 0px;
   padding: 0;
-  background-color: #f0efe7;
-  color: black;
-}
-
-.container{
-  padding: 10px;
-}
-
-.col-md-6 {
-  color: black;
-}
-
-.col-sm-12 {
-  color: black;
-}
-
-.list-heading {
-  color: snow;
-}
-.list-group-item-heading {
- color: black;
-}
-.list-group-item-text {
-  color: black;
 }
 
 
@@ -50,10 +27,8 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
-  margin: 0px 65px;
-  font-family: 'Bree Serif', serif;
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -67,9 +42,8 @@ body {
 /* Custom page footer */
 .footer {
   padding-top: 19px;
-  color: black;
-  border-top: 1px solid rgba(0, 0, 0, 0.25);
-  margin: 0px 65px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
 }
 
 .container-narrow > hr {
@@ -102,15 +76,6 @@ body {
     max-width: 730px;
   }
 
-  .container {
-    max-width: none;
-  }
-
-  .glyphicon-remove {
-    float: right;
-    margin-left: 100px;
-  }
-
   /* Remove the padding we set earlier */
   .header,
   .marketing,
@@ -127,63 +92,3 @@ body {
     border-bottom: 0;
   }
 }
-
-.footer-text {
-  color: rgba(0, 0, 0, 0.35);
-}
-
-.glyph-button:hover{
-  cursor:pointer;
-}
-
-div.todo-list-item:hover .glyphicon {opacity: 1;}
-div.todo-list-item .glyphicon {opacity: 0;}
-
-.glyph-position {
-  float: right;
-  position: relative;
-  right: 10px;
-  top: 8px;
-}
-
-.glyph-pencil-position {
-  margin-right: 10px;
-}
-
-.glyph-color {
-  color:black;
-}
-
-.list-group-item-heading {
-  display: inline-block;
-  color:black;
-}
-
-.info {
-  display: inline-block;
-}
-
-.backlog-header {
-  background-color: #A7DAEB;
-}
-
-.active-header {
-  background-color: #EBB8A7;
-}
-
-.done-header {
-  background-color: #B8EBA7;
-}
-
-.modal-title {
-  color: black;
-}
-
-.name-header {
-  float:right;
-}
-
-.login-field {
-  height: 300px;
-}
-

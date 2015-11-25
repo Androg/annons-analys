@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
   <classpathentry kind="src" path="src/main/resources" excluding="**/*.java"/>
   <classpathentry kind="output" path="target/classes"/>
   <classpathentry kind="var" path="M2_REPO/javax/ws/rs/javax.ws.rs-api/2.0.1/javax.ws.rs-api-2.0.1.jar" sourcepath="M2_REPO/javax/ws/rs/javax.ws.rs-api/2.0.1/javax.ws.rs-api-2.0.1-sources.jar">
@@ -229,6 +230,11 @@
   <classpathentry kind="var" path="M2_REPO/com/zaxxer/HikariCP/2.4.1/HikariCP-2.4.1.jar" sourcepath="M2_REPO/com/zaxxer/HikariCP/2.4.1/HikariCP-2.4.1-sources.jar">
     <attributes>
       <attribute value="jar:file:/Users/androgabriel/.m2/repository/com/zaxxer/HikariCP/2.4.1/HikariCP-2.4.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/jsoup/jsoup/1.7.2/jsoup-1.7.2.jar" sourcepath="M2_REPO/org/jsoup/jsoup/1.7.2/jsoup-1.7.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/androgabriel/.m2/repository/org/jsoup/jsoup/1.7.2/jsoup-1.7.2-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
   <classpathentry kind="var" path="M2_REPO/mysql/mysql-connector-java/5.1.36/mysql-connector-java-5.1.36.jar" sourcepath="M2_REPO/mysql/mysql-connector-java/5.1.36/mysql-connector-java-5.1.36-sources.jar"/>
