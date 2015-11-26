@@ -3,10 +3,14 @@ package se.eh.spring.model;
 import javax.persistence.*;
 
 @Entity
-public final class JobAds extends AbstractEntity {
+@Table(name="urls")
+public final class JobAds {
 
-    @Column(nullable = false)
+    @Column(name="url",nullable = false)
     private String url;
+
+    private int id;
+
 
     public JobAds(String url) {
         this.url = url;
@@ -20,12 +24,14 @@ public final class JobAds extends AbstractEntity {
         this.url = url;
     }
 
-    @Override
-    public String toString() {
-        return "JobAdSpring{" +
-                "url='" + url + '\'' +
-                '}';
+
+    @Id
+    @GeneratedValue
+    @Column(name = "id", unique = true, nullable = false)
+    public int getId() {
+        return this.id;
     }
-
-
+    public void setId(int id) {
+        this.id = id;
+    }
 }

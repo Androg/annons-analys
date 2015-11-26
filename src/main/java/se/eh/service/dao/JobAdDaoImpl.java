@@ -70,8 +70,4 @@ public final class JobAdDaoImpl {
         }
     }
 
-    @Override
-    public String toString() {
-        return String.valueOf(resultSet);
-    }
 }

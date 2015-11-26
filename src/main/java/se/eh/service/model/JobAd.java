@@ -1,14 +1,16 @@
 package se.eh.service.model;
 
+import javax.persistence.Column;
+import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import java.io.Serializable;
 
-@XmlAccessorType(XmlAccessType.NONE)
+@Table(name="urls")
 public final class JobAd implements Serializable{
 
-    @XmlElement(name="url")
+    @Column(name="url")
     private String url;
 
     public JobAd() {

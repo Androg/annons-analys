@@ -6,9 +6,9 @@ import se.eh.service.dao.JobAdDaoImpl;
 import se.eh.spring.model.JobAds;
 import se.eh.spring.service.JobAdsService;
 
+import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
-import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import java.io.IOException;
@@ -16,10 +16,11 @@ import java.net.URI;
 import java.sql.SQLException;
 
 @Path("/urls")
-@Produces({MediaType.APPLICATION_JSON})
-@Consumes({MediaType.APPLICATION_JSON})
+@Produces("application/json")
+@Consumes("application/json")
 public final class JobAdResource {
 
+    @Inject
     private JobAdsService jobAdsService = new JobAdsService();
 
     private String title;
@@ -27,7 +28,7 @@ public final class JobAdResource {
     private JobAdDaoImpl urlDao = new JobAdDaoImpl();
 
     @GET
-    @Path("/getTitle")
+    @Path("/gettitle")
     public String getAllJobAds() throws SQLException {
         try {
             document = Jsoup.connect(urlDao.getAllUrls().getUrl()).get();
@@ -38,9 +39,10 @@ public final class JobAdResource {
         return title;
     }
 
+
     @POST
-    public Response createUrl(@Context UriInfo uriInfo, JobAds jobAds) {
-        JobAds result = jobAdsService.addJobAd(jobAds);
+    public Response createUser(@Context UriInfo uriInfo, JobAds jobAds) {
+        JobAds result = jobAdsService.addJobAd(new JobAds(jobAds.getUrl()));
         if (result != null) {
             URI uri = uriInfo.getAbsolutePathBuilder().path(result.getUrl()).build();
             return Response.created(uri)

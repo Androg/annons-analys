@@ -16,4 +16,10 @@ angular.module('annons-analys', [
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/post', {
+      templateUrl: 'views/post.html',
+      controller: 'MainCtrl',
+      controllerAs: 'post'
+    })
+      
   });
