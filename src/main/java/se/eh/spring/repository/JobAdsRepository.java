@@ -1,7 +1,9 @@
 package se.eh.spring.repository;
 
 import org.springframework.data.repository.CrudRepository;
-import se.eh.spring.model.JobAds;
+import se.eh.spring.model.JobAd;
 
-public interface JobAdsRepository extends CrudRepository<JobAds, Long> {
+
+public interface JobAdsRepository extends CrudRepository<JobAd, Long>
+{
 }

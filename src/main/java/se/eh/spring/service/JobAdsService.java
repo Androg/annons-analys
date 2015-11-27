@@ -2,23 +2,26 @@ package se.eh.spring.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import org.springframework.dao.DataAccessException;
-import se.eh.spring.model.JobAds;
+import org.springframework.stereotype.Service;
+import se.eh.spring.model.JobAd;
 import se.eh.spring.repository.JobAdsRepository;
 
-public final class JobAdsService {
+@Service
+public final class JobAdsService
+{
+	@Autowired
+	private JobAdsRepository jobAdsRepository;
 
-    @Autowired
-    private JobAdsRepository jobAdsRepository;
+	public JobAd createJobAd(JobAd jobAd) {
+		JobAd createdJobAd = new JobAd(jobAd.getUrl());
+		return jobAdsRepository.save(createdJobAd);
+	}
 
-    public JobAds addJobAd(JobAds jobAds) {
-        try {
-            JobAds createdJobAd = new JobAds(jobAds.getUrl());
-            return jobAdsRepository.save(createdJobAd);
-        } catch (NullPointerException | DataAccessException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
+	public JobAd findJobAd(Long id) {
+		return jobAdsRepository.findOne(id);
+	}
 
+	public Iterable<JobAd> fetchAllUrls() {
+		return jobAdsRepository.findAll();
+	}
 }

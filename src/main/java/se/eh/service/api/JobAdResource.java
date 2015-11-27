@@ -1,48 +1,40 @@
 package se.eh.service.api;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import se.eh.service.dao.JobAdDaoImpl;
-import se.eh.spring.model.JobAds;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import se.eh.spring.model.JobAd;
 import se.eh.spring.service.JobAdsService;
 
-import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
-import java.io.IOException;
 import java.net.URI;
-import java.sql.SQLException;
 
 @Path("/urls")
-@Produces("application/json")
-@Consumes("application/json")
+@Produces({MediaType.APPLICATION_JSON})
+@Consumes({MediaType.APPLICATION_JSON})
 public final class JobAdResource {
 
-    @Inject
-    private JobAdsService jobAdsService = new JobAdsService();
+    private final AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+    private  JobAdsService service = new JobAdsService();
 
-    private String title;
-    private Document document;
-    private JobAdDaoImpl urlDao = new JobAdDaoImpl();
-
-    @GET
-    @Path("/gettitle")
-    public String getAllJobAds() throws SQLException {
-        try {
-            document = Jsoup.connect(urlDao.getAllUrls().getUrl()).get();
-            title = document.title();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return title;
+    {
+        context.scan("se.eh.spring.config");
+        context.refresh();
+        service = context.getBean(JobAdsService.class);
     }
 
+    @GET
+    @Path("/getTitle")
+    public final Response getAllJobAds(){
+        Iterable allUrls = service.fetchAllUrls();
+        return Response.ok().entity(allUrls).build();
+    }
 
     @POST
-    public Response createUser(@Context UriInfo uriInfo, JobAds jobAds) {
-        JobAds result = jobAdsService.addJobAd(new JobAds(jobAds.getUrl()));
+    public final Response createUrl(@Context UriInfo uriInfo, JobAd jobAd) {
+        JobAd result = service.createJobAd(jobAd);
         if (result != null) {
             URI uri = uriInfo.getAbsolutePathBuilder().path(result.getUrl()).build();
             return Response.created(uri)
@@ -51,7 +43,4 @@ public final class JobAdResource {
         }
         throw new BadRequestException();
     }
-
-
-
 }

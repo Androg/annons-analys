@@ -5,16 +5,14 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
-public class AbstractEntity {
-    @Id
-    @GeneratedValue
-    Long id;
+public class AbstractEntity
+{
+	@Id @GeneratedValue
+	private Long id;
 
-    protected AbstractEntity() {
-    }
+	protected AbstractEntity() {}
 
-
-    public Long getId() {
-        return id;
-    }
+	public Long getId() {
+		return id;
+	}
 }
