@@ -12,6 +12,7 @@
 .LSOverride
 .idea/
 mysql.properties
+.settings
 
 
 /target/
