@@ -1,24 +1,31 @@
 package se.eh.service.api;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import se.eh.service.dao.JobAdDaoImpl;
-import se.eh.spring.model.JobAds;
-import se.eh.spring.service.JobAdsService;
-
-import javax.inject.Inject;
-import javax.ws.rs.*;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.UriInfo;
 import java.io.IOException;
 import java.net.URI;
 import java.sql.SQLException;
 
-@Consumes("application/json")
-@Produces("application/json")
+import javax.inject.Inject;
+import javax.ws.rs.BadRequestException;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriInfo;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+import se.eh.service.dao.JobAdDaoImpl;
+import se.eh.spring.model.JobAds;
+import se.eh.spring.service.JobAdsService;
+
 @Path("/urls")
+@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
+@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 public final class JobAdResource {
 
 	@Inject

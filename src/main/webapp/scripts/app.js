@@ -7,7 +7,7 @@ angular.module('annons-analys', [
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'as.sortable'
+    'as.sortable',
   ])
   .config(function ($routeProvider) {
     $routeProvider

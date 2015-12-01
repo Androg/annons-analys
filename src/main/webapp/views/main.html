@@ -1,20 +1,24 @@
+<script src="../scripts/controllers/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+<div  ng-app="annons-analys" ng-controller="MainCtrl">
 <div class="container">
-<input id="image" type="image" name="Cruited" src="images/Cruited.png">
+	<input id="image" type="image" name="Cruited" src="images/Cruited.png">
 </div>
 
-<div class="container" id="url">
-<div>
-	<p id="jobTitle">Job post</p>
-	<form>
-    <input type="text" ng-model="url" placeholder="url" class="form-control">
-    </form>
-  </div>
- </div>
- </form>
- </div>
+	<div id="url">
+		<div>
+			<p id="jobTitle">Job post</p>
+	<form role="form">
+			<input type="text" ng-model="url" placeholder="url"
+				class="form-control" required="required">
+</form>
+		</div>
+	</div>
 
- <!-- Button Start -->
- <div class="container">
- <button id="startButton" type="button" class="btn" ng-click="sendForm()">Start</button>
-</div>
+<!-- Button Start -->
+	<div>
+		<button id="startButton" type="submit" class="btn"
+			ng-click="sendForm()">Start</button>
+		<span>{{ test }}</span>
+	</div>
 </div>
