@@ -1,22 +1,17 @@
-<div  ng-app="annons-analys" ng-controller="MainCtrl">
 <div class="container">
-	<input id="image" type="image" name="Cruited" src="images/Cruited.png">
+  <input id="image" type="image" name="Cruited" src="images/Cruited.png">
 </div>
 
-	<div id="url">
-		<div>
-			<p id="jobTitle">Job post</p>
-	<form role="form">
-			<input type="text" ng-model="url" placeholder="url"
-				class="form-control" required="required">
-</form>
-		</div>
-	</div>
-
-<!-- Button Start -->
-	<div>
-		<button id="startButton" type="submit" class="btn"
-			ng-click="sendForm()">Start</button>
-		<span>{{ test }}</span>
-	</div>
+<div class="container" id="url">
+  <div  id="jobPost">
+    <form name="jobPostForm" ng-submit="sendForm()">
+      <div class="form-group">
+        <label for="jobPost">Job Post</label>
+        <input name="url" type="text" class="form-control input-sm" ng-model="url.url" required/>
+        <p class="alert alert-danger" ng-show="jobPostForm.url.$error.required && JobPostForm.url.$dirty" class="alert alert-warning">
+          Required</p>
+      </div>
+      <input type="submit" class="btn btn-primary btn-sm btn-block" ng-disabled="jobPostForm.$dirty && jobPostForm.$invalid" />
+    </form>
+  </div>
 </div>

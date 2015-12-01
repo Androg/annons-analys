@@ -14,27 +14,6 @@
     "angular-mocks": "^1.3.0"
   
   },
-  
-    "name": "ngstorage",
-    "version": "0.3.10",
-    "main": "./ngStorage.js",
-    "keywords": [
-        "angular",
-        "cookie",
-        "storage",
-        "local",
-        "localstorage",
-        "session",
-        "sessionstorage"
-    ],
-    
-    
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/gsklee/ngStorage.git"
-    }
-    
-    
   "appPath": "app",
   "moduleName": "annons-analys",
   "overrides": {
