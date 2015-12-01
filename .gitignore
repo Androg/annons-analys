@@ -14,5 +14,8 @@
 mysql.properties
 .settings
 
+/lib
+
+contributors.txt
 
 /target/
