@@ -1,15 +1,16 @@
 'use strict';
 
 angular.module('annons-analys', [
+    'LocalStorageModule',
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'as.sortable'
+    'as.sortable',
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, localStorageServiceProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -21,5 +22,9 @@ angular.module('annons-analys', [
       controller: 'MainCtrl',
       controllerAs: 'post'
     })
-      
+     
+		  localStorageServiceProvider
+		  	.setPrefix('annons-analys')
+    		.setStorageType('localStorage')
+    		.setNotify(true, true);
   });

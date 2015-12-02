@@ -1,13 +1,17 @@
 'use strict';
 
-angular.module('annons-analys')
-	.controller('MainCtrl', function ($scope, myFactory, $http) {
-		$scope.url = {};
+angular.module('annons-analys').controller(
+		'MainCtrl',
+		[ '$scope', '$http', '$location', 'localStorageService',
+				function($scope, $http, $location, localStorageService) {
 
-		$scope.sendForm = function() {
-			myFactory.addUrl($scope.url);
-				console.log($scope.url);
-		}
+					$scope.url = {};
 
+					$scope.sendForm = function() {
+						$location.path('post')
+						return localStorageService.set('key', $scope.url.url);
+					};
+					
+					$scope.adress = localStorageService.get('key');
 
-	});
+				} ]);
