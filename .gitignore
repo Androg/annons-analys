@@ -6,6 +6,7 @@
 /src/main/webapp/scripts/dependencies
 /src/main/webapp/styles/fonts
 /src/main/webapp/styles/stylesheets
+/src/main/webapp/assets
 
 .DS_Store
 .AppleDouble
@@ -14,11 +15,9 @@
 mysql.properties
 .settings
 
-<<<<<<< HEAD
-=======
 /lib
 
 contributors.txt
->>>>>>> f9d13272d74618ae327ea12cf8cf338813f2fe0f
+
 
 /target/
