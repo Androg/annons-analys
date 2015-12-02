@@ -11,7 +11,5 @@ angular.module('annons-analys').controller(
 						$location.path('post')
 						return localStorageService.set('key', $scope.url.url);
 					};
-					
-					$scope.adress = localStorageService.get('key');
 
 				} ]);
