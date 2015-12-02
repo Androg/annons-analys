@@ -1,0 +1,15 @@
+<div id="url">
+    <div id="jobPost">
+        <form name="jobPostForm" ng-submit="sendForm()">
+            <div role="form">
+                <label for="jobPost">Job Post</label>
+                <input placeholder="HALLLÅÅÅÅÅ" type="text" class="form-control input-sm" ng-model="url.url" required />
+                <p class="alert alert-danger"
+                   ng-show="jobPostForm.url.$error.required && JobPostForm.url.$dirty"
+                   class="alert alert-warning">Required</p>
+            </div>
+            <input type="submit" class="btn btn-primary btn-sm btn-block"
+                   ng-disabled="jobPostForm.$dirty && jobPostForm.$invalid" />
+        </form>
+    </div>
+</div>
