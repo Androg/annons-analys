@@ -28,3 +28,4 @@ angular.module('annons-analys', [
     		.setStorageType('localStorage')
     		.setNotify(true, true);
   });
+

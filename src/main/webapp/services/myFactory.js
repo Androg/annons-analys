@@ -15,6 +15,9 @@ angular.module('annons-analys')
         return {
             addUrl: function (url) {
                 return $http.post(jobAdUrl, url);
+            },
+            getTitleFromUrl: function() {
+                return $http.get(jobAdUrl + '/getTitle')
             }
         };
 

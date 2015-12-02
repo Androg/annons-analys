@@ -17,11 +17,12 @@ public final class JobAdsService
 		return jobAdsRepository.save(createdJobAd);
 	}
 
-	public JobAd findJobAd(Long id) {
-		return jobAdsRepository.findOne(id);
+	public JobAd findJobAd(int id) {
+		return jobAdsRepository.findById(id);
 	}
 
 	public Iterable<JobAd> fetchAllUrls() {
 		return jobAdsRepository.findAll();
 	}
+
 }

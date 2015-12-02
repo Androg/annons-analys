@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class JobAd extends AbstractEntity
 {
 
-	@Column(nullable = false)
+    @Column(nullable = false)
 	private String url;
 
 	protected JobAd() {
