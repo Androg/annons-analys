@@ -9,16 +9,17 @@
 		<input type="text" class="form-control" placeholder="Project Manager"
 			ng-model="title.title"> <br /> <br />
 		<p>Employer</p>
-		<input name="employerConfirm" type="text" class="form-control" required="required"> <br />
-		<br />
+		<input type="text" class="form-control" value="{{ title }}"> <br />
+		<br /> <br /> 
 		<div id="url">
 			<span class="glyphicon glyphicon-globe"></span> <a
 				ng-href="{{adress}}"> {{ adress }}</a></span>
 		</div>
 
+		<br /> <br />
+
+		<button ng-click="newPage()" id="confirm" type="submit" class="btn">Confirm
+			and Continue</button>
 		<br /> <br /> <br />
 
-		<button ng-click="confirm()" id="confirm" type="submit" class="btn">Confirm
-			and Continue</button>
 	</div>
-</div>

@@ -1,16 +1,15 @@
 angular.module('annons-analys').controller(
 		'LoginCtrl',
-		[ '$scope', '$http', '$location', 'auth', 'localStorageService',
-				function($scope, $http, $location, auth, localStorageService) {
-					$scope.login = function () {
+		[ '$scope', '$http', 'auth', 'store', '$location',
+				function($scope, $http, auth, store, $location) {
+					$scope.login = function() {
 						auth.signin({}, function(profile, token) {
 							// Success callback
 							store.set('profile', profile);
 							store.set('token', token);
-							$location.path('/');
+							$location.path('post');
 						}, function() {
 							// Error callback
 						});
 					}
-
 				} ]);
