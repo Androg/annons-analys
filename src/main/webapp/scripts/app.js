@@ -23,13 +23,11 @@ angular.module('annons-analys', [
       })
       .when('/post', {
       templateUrl: 'views/post.html',
-      controller: 'PostCtrl',
-      controllerAs: 'post'
+      controller: 'PostCtrl'
     })
     .when('/login', {
         templateUrl: 'views/login.html',
-        controller: 'LoginCtrl',
-        controllerAs: 'login'
+        controller: 'LoginCtrl'
       })
 
 
