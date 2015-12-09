@@ -102,5 +102,9 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.5.4" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.5.4" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.5.4" level="project" />
+    <orderEntry type="library" name="lock-7.12" level="application" />
+    <orderEntry type="library" name="angular-storage" level="application" />
+    <orderEntry type="library" name="angular-jwt" level="application" />
+    <orderEntry type="library" name="auth0-angular-4" level="application" />
   </component>
 </module>

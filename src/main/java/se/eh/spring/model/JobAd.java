@@ -21,7 +21,7 @@ public class JobAd extends AbstractEntity
 	}
 
 	public void setUrl(String url) {
-		this.url = url;
+        this.url = url;
 	}
 
 }

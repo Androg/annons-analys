@@ -1,7 +1,16 @@
+'use strict';
 angular.module('annons-analys').controller('PostCtrl',
-		[ '$scope', '$http', '$location', 'localStorageService' ],
-		function($scope, $http, $location, localStorageService) {
+		[ '$scope', '$http', '$location', 'localStorageService', 'myFactory',
+		function($scope, $http, $location, localStorageService, myFactory) {
 
-			$scope.adress = localStorageService.get('annons-analys.key');
+			$scope.adress = localStorageService.get('key');
 
-		});
+            myFactory.getTitleFromUrl().then(function(data) {
+                $scope.title = data.data;
+            })
+
+            $scope.newPage = function() {
+                $location.path('login');
+            }
+
+		}]);

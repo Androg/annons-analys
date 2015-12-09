@@ -7,6 +7,8 @@ import javax.persistence.MappedSuperclass;
 @MappedSuperclass
 public class AbstractEntity
 {
+    @GeneratedValue
+    @Id
 	private int id;
 
 	protected AbstractEntity() {}
