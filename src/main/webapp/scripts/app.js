@@ -19,9 +19,14 @@ angular.module('annons-analys', [
       })
       .when('/post', {
       templateUrl: 'views/post.html',
-      controller: 'MainCtrl',
+      controller: 'PostCtrl',
       controllerAs: 'post'
     })
+    .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl',
+        controllerAs: 'login'
+      })
      
 		  localStorageServiceProvider
 		  	.setPrefix('annons-analys')

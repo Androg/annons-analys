@@ -1,19 +1,22 @@
-<div class="container">
-	<input id="image" type="image" name="Cruited" src="images/Cruited.png">
+<!--  <img src="images/beautiful-wallpaper.jpg" />-->
+<div id="page-header">
+	<h1>You've found a job you really want, discover the best messages for your job application</h1>
 </div>
 
-<div id="url">
-	<div id="jobPost">
-		<form name="jobPostForm" ng-submit="sendForm()">
-			<div role="form">
-				<label for="jobPost">Job Post</label> <input placeholder="url"
-					type="text" class="form-control input-sm" ng-model="url.url"
-					required />
-				<p class="alert alert-danger"
-					ng-show="jobPostForm.url.$error.required && JobPostForm.url.$dirty"
-					class="alert alert-warning">Required</p>
-			</div>
-			<input type="submit" class="btn btn-primary btn-sm btn-block"
-				ng-disabled="jobPostForm.$dirty && jobPostForm.$invalid" />
-		</form>
+<div class="container">
+		<div id="jobPost">
+			<form name="jobPostForm" ng-submit="sendForm()">
+				<div role="form">
+					<label for="jobPost">Job Post</label> <input placeholder="url"
+						type="text" class="form-control input-sm" ng-model="url.url"
+						required />
+					<p class="alert alert-danger"
+						ng-show="jobPostForm.url.$error.required && JobPostForm.url.$dirty"
+						class="alert alert-warning">Required</p>
+				<input id="btn" type="submit" value="Start" class="btn btn-primary"
+					ng-disabled="jobPostForm.$dirty && jobPostForm.$invalid" />
+					</div>
+			</form>
+		</div>
 	</div>
+
