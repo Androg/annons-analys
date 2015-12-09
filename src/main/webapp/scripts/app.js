@@ -21,14 +21,14 @@ angular.module('annons-analys', [
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-        .when('/post', {
-            templateUrl: 'views/post.html',
-            controller: 'PostCtrl'
-        })
-        .when('/login', {
-            templateUrl: 'views/login.html',
-            controller: 'LoginCtrl'
-        });
+      .when('/post', {
+      templateUrl: 'views/post.html',
+      controller: 'PostCtrl'
+    })
+    .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl'
+      })
 
 
 		  localStorageServiceProvider

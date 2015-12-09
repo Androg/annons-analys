@@ -1,25 +1,25 @@
+<div id="page-header">
+	<p style="padding: 0.5em;" class="glyphicon glyphicon-align-justify"></p>
+</div>
 <div class="container">
-	<input id="image" type="image" name="Cruited" src="images/Cruited.png"
-		height="50">
-	<div class="container" id="jobPost">
-		<h4>The Job You're Looking For</h4>
+	<div id="jobTitle">
+		<h4 style="margin-left: 1em;">The Job You're Looking For</h4>
 		<br />
 		<p>Position You're Looking For</p>
-		<input type="text" class="form-control" value="{{ title }}">
-		<br /> <br />
+		<input type="text" class="form-control" placeholder="Project Manager"
+			ng-model="title.title"> <br /> <br />
 		<p>Employer</p>
-		<input type="text" class="form-control">
-		 <br /> 
-		 <br /> 
-		 <a href="{{ adress }}"> {{ adress }} </a>
-	</div>
+		<input type="text" class="form-control" value="{{ title }}"> <br />
+		<br /> <br /> 
+		<div id="url">
+			<span class="glyphicon glyphicon-globe"></span> <a
+				ng-href="{{adress}}"> {{ adress }}</a></span>
+		</div>
 
-	<br />
-	<br /> 
-	<br />
+		<br /> <br />
 
-	<div class="container">
-		<button id="confirm" type="button" class="btn" ng-click="newPage()">Confirm and
-			Continue</button>
+		<button ng-click="newPage()" id="confirm" type="submit" class="btn">Confirm
+			and Continue</button>
+		<br /> <br /> <br />
+
 	</div>
-</div>
