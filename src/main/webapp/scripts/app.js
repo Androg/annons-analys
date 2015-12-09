@@ -9,8 +9,12 @@ angular.module('annons-analys', [
     'ngSanitize',
     'ngTouch',
     'as.sortable',
+    'auth0',
+    'angular-jwt',
+    'angular-storage'
   ])
-  .config(function ($routeProvider, localStorageServiceProvider) {
+  .config(function ($routeProvider, authProvider, localStorageServiceProvider) {
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -27,10 +31,18 @@ angular.module('annons-analys', [
         controller: 'LoginCtrl',
         controllerAs: 'login'
       })
-     
+
+
 		  localStorageServiceProvider
 		  	.setPrefix('annons-analys')
     		.setStorageType('localStorage')
     		.setNotify(true, true);
-  });
+
+        authProvider.init({
+            domain: 'cruited.eu.auth0.com',
+            clientID: 'eTeOj49y9jKol7ZaNaeXMKJCfJZtJrte'
+        });
+}).run(function (auth) {
+        auth.hookEvents();
+    });
 

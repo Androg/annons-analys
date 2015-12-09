@@ -1,21 +1,16 @@
+'use strict';
 angular.module('annons-analys').controller('PostCtrl',
-		[ '$scope', '$http', '$window', '$location', 'localStorageService',
-		function($scope, $http, $window, $location, localStorageService) {
+		[ '$scope', '$http', '$location', 'localStorageService', 'myFactory',
+		function($scope, $http, $location, localStorageService, myFactory) {
 
 			$scope.adress = localStorageService.get('key');
-			
-			$scope.goToLink = function() {
-				$location.path($scope.adress);
-			}
-			
-			$scope.title = {};
-			
-			function setTitle  () {
-				localStorageService.set('key', $scope.title.title);
-			}
-			
-			$scope.confirm = function  () {
-				$location.path('login')
-			}
+
+            myFactory.getTitleFromUrl().then(function(data) {
+                $scope.title = data.data;
+            })
+
+            $scope.newPage = function() {
+                $location.path('login');
+            }
 
 		}]);
