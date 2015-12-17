@@ -43,11 +43,10 @@ form {
 }
 
 #page-header {
-	background-image: url(../images/beautiful-wallpaper.jpg);
-	background-size: cover;
-	background-position: center top;
-	
-	text-shadow: 0 0 .2em #222;
+  background-size: cover;
+  background: url(../images/beautiful-wallpaper.jpg) center top;
+
+  text-shadow: 0 0 .2em #222;
 	color: white;
 
 	display: flex;

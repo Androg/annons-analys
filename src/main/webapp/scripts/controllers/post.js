@@ -13,4 +13,8 @@ angular.module('annons-analys').controller('PostCtrl',
                 $location.path('login');
             }
 
+            myFactory.getTitleFrompage($scope.adress).then(function(response) {
+                $scope.list = response.document.getElementsByTagName('title');
+            })
+
 		}]);

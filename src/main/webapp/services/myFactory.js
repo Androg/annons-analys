@@ -18,6 +18,9 @@ angular.module('annons-analys')
             },
             getTitleFromUrl: function() {
                 return $http.get(jobAdUrl + '/getTitle');
+            },
+            getTitleFrompage: function(url) {
+                return $http.get(url);
             }
         };
 
