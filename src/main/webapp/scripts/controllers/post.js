@@ -8,6 +8,7 @@ angular.module('annons-analys').controller('PostCtrl',
             myFactory.getTitleFromUrl().then(function(data) {
                 $scope.title = data.data;
             })
+            
 
             $scope.newPage = function() {
                 $location.path('login');

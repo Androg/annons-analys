@@ -7,8 +7,7 @@ import se.eh.spring.model.JobAd;
 import se.eh.spring.repository.JobAdsRepository;
 
 @Service
-public final class JobAdsService
-{
+public final class JobAdsService {
 	@Autowired
 	private JobAdsRepository jobAdsRepository;
 
@@ -17,10 +16,10 @@ public final class JobAdsService
 		return jobAdsRepository.save(createdJobAd);
 	}
 
-    public JobAd saveTitleToDatabase(String title) {
-        JobAd jobAdTitle = new JobAd(title);
-        return jobAdsRepository.save(jobAdTitle);
-    }
+	public JobAd saveTitleToDatabase(String title) {
+		JobAd jobAdTitle = new JobAd(title);
+		return jobAdsRepository.save(jobAdTitle);
+	}
 
 	public JobAd findJobAd(int id) {
 		return jobAdsRepository.findById(id);
