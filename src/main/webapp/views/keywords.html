@@ -1,0 +1,45 @@
+<div id="page-header">
+	<p style="padding: 0.4em;" class="glyphicon glyphicon-align-justify"></p>
+</div>
+
+<br />
+<br />
+
+<p id="description">
+	Read the Job posting. <br /> Pick out three <br /> keywords that
+	describe the <br /> characteristics of the person they're <br />
+	looking for
+</p>
+<br />
+<div class="container">
+	<!-- keyword input -->
+	<form role="form" ng-submit="addKeyword()">
+		<div class="row">
+			<div class="input-group">
+				<input type="text" ng-model="keyword"
+					placeholder="it's important to be..." class="form-control">
+				<span class="input-group-btn"> <input type="submit"
+					class="btn btn-primary" value="Add">
+				</span>
+			</div>
+		</div>
+	</form>
+
+	<!-- keyword list -->
+	<div data-as-sortable="dragControlListeners" data-ng-model="keywords"
+		id="jobTitle"ui-sortable">
+		<p class="input-group" ng-repeat="keyword in keywords"
+			data-as-sortable-item style="padding: 5px 10px; cursor: move;">
+			<input data-as-sortable-item-handle type="text" ng-model="keyword"
+				class="form-control"> <span class="input-group-btn">
+				<button class="btn btn-danger" ng-click="removeKeyword ($index)"
+					aria-label="Remove"><span class="glyphicon glyphicon-pencil"></span></button>
+			</span>
+		</p>
+		<br /> <br /> <br /> <br /> <br /> <br /> <br />
+		<button ng-click="newPage()" id="confirm" type="submit" class="btn">Confirm
+			and Continue</button>
+		<br />
+		<p style="margin-left: 6em;">Add 3+ to continue</p>
+	</div>
+</div>
