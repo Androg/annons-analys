@@ -3,14 +3,11 @@
 /**
  * @ngdoc service
  * @name factoriesApp.myFactory
- * @description
- * # myFactory
- * Factory in the factoriesApp.
+ * @description # myFactory Factory in the factoriesApp.
  */
-angular.module('annons-analys')
-    .factory('myFactory', function ($http) {
+angular.module('annons-analys').factory('myFactory', function($http) {
 
-        var jobAdUrl = '/v1/urls';
+	var jobAdUrl = '/v1/urls';
 
         return {
             addUrl: function (url) {
@@ -24,4 +21,4 @@ angular.module('annons-analys')
             }
         };
 
-    });
+});

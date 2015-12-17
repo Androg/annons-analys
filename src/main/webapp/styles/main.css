@@ -5142,6 +5142,10 @@ button.close {
 .glyphicon-align-justify:before {
   font-size: x-large; }
 
+#description {
+  display: flex;
+  justify-content: center; }
+
 #accountCreate {
   margin-left: 4em; }
 

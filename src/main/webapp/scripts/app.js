@@ -29,6 +29,10 @@ angular.module('annons-analys', [
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
       })
+        .when('/keywords', {
+        templateUrl: 'views/keywords.html',
+        controller: 'KeysCtrl'
+      })
 
 
 		  localStorageServiceProvider

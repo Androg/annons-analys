@@ -9,9 +9,10 @@ angular.module('annons-analys').controller('PostCtrl',
                 $scope.title = data.data;
             });
 
+
             $scope.newPage = function() {
                 $location.path('login');
-            }
+            };
 
             myFactory.getTitleFrompage($scope.adress).then(function(response) {
                 $scope.list = response.document.getElementsByTagName('title');
