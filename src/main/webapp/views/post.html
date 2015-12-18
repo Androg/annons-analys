@@ -2,26 +2,21 @@
 	<p style="padding: 0.5em;" class="glyphicon glyphicon-align-justify"></p>
 </div>
 <div class="container">
-	<div id="jobTitle">
-		<h4 style="margin-left: 1em;">The Job You're Looking For</h4>
-		<br />
-		<p>Position You're Looking For</p>
-		<input type="text" class="form-control" placeholder="Project Manager"
-			ng-model="title.title" value="{{ title }}" required="required"> <br /> <br />
-		<p>Employer</p>
-		<input type="text" class="form-control" required="required"> <br /> <br /> <br />
-		<div id="url">
-			<span class="glyphicon glyphicon-globe"></span> <a
-				ng-href="{{adress}}"> {{ list }}</a></span>
-		</div>
+    <div id="JobAdInfo">
+        <form name="JobAdInfo" ng-submit="newPage()">
+            <div role="form">
+                <label for="jobadinfo">The Job You're Looking For</label>
+                <input placeholder="Project Manager" type="text" class="form-control input-sm" ng-model="title.title" required />
+                <p class="alert alert-danger" ng-show="JobAdInfo.title.title.$error.required && JobAdTitle.title.title.$dirty"
+                   class="alert alert-warning">Required</p>
 
-		<br /> <br />
+                <input placeholder="Eriksson" type="text" class="form-control input-sm" ng-model="title.employer" required />
+                <p class="alert alert-danger" ng-show="JobAdInfo.title.employer.$error.required && JobAdTitle.employer.title.$dirty"
+                   class="alert alert-warning">Required</p>
 
-		<p class="alert alert-danger"
-					ng-show="jobPostForm.url.$error.required && JobPostForm.url.$dirty"
-					class="alert alert-warning">Required</p>
-		<button ng-click="newPage()" id="confirm" type="submit" class="btn" ng-disabled="jobPostForm.$dirty && jobPostForm.$invalid">Confirm
-			and Continue</button>
-		<br /> <br /> <br />
-	</div>
+                <input id="btn" type="submit" value="Start" class="btn btn-primary"
+                       ng-disabled="JobAdInfo.$dirty && JobAdInfo.$invalid" />
+            </div>
+        </form>
+    </div>
 </div>
