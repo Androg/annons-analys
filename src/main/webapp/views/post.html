@@ -1,30 +1,41 @@
 <div id="page-header">
 	<p style="padding: 0.5em;" class="glyphicon glyphicon-align-justify"></p>
 </div>
+
 <div class="container">
-    <div id="JobAdInfo">
-        <form name="JobAdInfo" ng-submit="newPage()">
-            <div role="form">
-                <label for="jobadinfo">The Job You're Looking For</label>
-                <input placeholder="{{ list }}" type="text" class="form-control input-sm" ng-model="JobAd.title" required />
-                <p class="alert alert-danger" ng-show="JobAdInfo.JobAd.title.$error.required && JobAdInfo.JobAd.title.$dirty"
-                   class="alert alert-warning">Required</p>
+<div id="JobAdInfo">
+	<form name="JobAdInfo" ng-submit="newPage()">
+		<div role="form">
+		<br/>
+			<label for="jobadinfo">The Job You're Looking For</label> 
+			<br /> <br /> <br />
+			<p>Position you're looking for</p>
+			<input placeholder="Project Manager" type="text"
+				class="form-control input-sm" ng-model="title.title" required />
 
-                <br/>
-                <br/>
-                <br/>
+			<p class="alert alert-danger"
+				ng-show="JobAdInfo.title.title.$error.required && JobAdTitle.title.title.$dirty"
+				class="alert alert-warning">Required</p>
 
-                <input placeholder="Eriksson" type="text" class="form-control input-sm" ng-model="JobAd.employer" required />
-                <p class="alert alert-danger" ng-show="JobAdInfo.JobAd.employer.$error.required && JobAdInfo.JobAd.employer.$dirty"
-                   class="alert alert-warning">Required</p>
+			<br /> <br />
+			<p>Employer</p>
+			<input placeholder="Ericsson" type="text"
+				class="form-control input-sm" ng-model="title.employer" required />
+			<p class="alert alert-danger"
+				ng-show="JobAdInfo.title.employer.$error.required && JobAdTitle.employer.title.$dirty"
+				class="alert alert-warning">Required</p>
+				
+				<br /> <br />
+				<span class="glyphicon glyphicon-globe"><a id="url" ng-href="{{ adress }}"> {{ adress }}</a></span>
+                
 
-                <span class="glyphicon glyphicon-globe"></span>
-                <a ng-href="{{ adress }}"> {{ adress }}</a>
-
-                <input id="btn" type="submit" value="Start" class="btn btn-primary"
-                       ng-disabled="JobAdInfo.$dirty && JobAdInfo.$invalid" />
-            </div>
-        </form>
-    </div>
-
+			<p class="alert alert-danger"
+				ng-show="jobPostForm.url.$error.required && JobPostForm.url.$dirty"
+				class="alert alert-warning">Required</p>
+			<button style="margin-top:3em;" ng-click="newPage()" id="confirm" type="submit" class="btn"
+				ng-disabled="jobPostForm.$dirty && jobPostForm.$invalid">Confirm
+				and Continue</button>
+		</div>
+	</form>
+</div>
 </div>
