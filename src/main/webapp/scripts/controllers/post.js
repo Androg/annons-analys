@@ -5,13 +5,20 @@ angular.module('annons-analys').controller('PostCtrl',
 
 			$scope.adress = localStorageService.get('key');
 
+            $scope.jobAd = {};
+
             myFactory.getTitleFromUrl().then(function(data) {
-                $scope.title = data.data;
-            })
-            
+                $scope.randomStuffdotExe = data.data;
+            });
+
 
             $scope.newPage = function() {
-                $location.path('login');
-            }
+                console.log($scope.jobAd);
+                $location.path('keywords');
+            };
+
+            myFactory.getTitleFromPage($scope.adress).then(function(response) {
+                $scope.list = response.document.getElementsByTagName('title');
+            })
 
 		}]);

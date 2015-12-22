@@ -6,9 +6,8 @@
 <br />
 
 <p id="description">
-	Read the Job posting. <br /> Pick out three <br /> keywords that
-	describe the <br /> characteristics of the person they're <br />
-	looking for
+	Read the Job posting. Pick out three <br /> keywords that describe the
+	<br /> characteristics of the person they're <br /> looking for
 </p>
 <br />
 <div class="container">
@@ -26,14 +25,14 @@
 	</form>
 
 	<!-- keyword list -->
-	<div ng-model="keywords"
-		id="jobTitle"ui-sortable">
-		<p class="input-group" ng-repeat="keyword in keywords track by $index" 
-		style="padding: 5px 10px;">
-			<input type="text" ng-model="keyword"
-				class="form-control"> <span class="input-group-btn">
+	<div ng-model="keywords" id="jobTitle"ui-sortable">
+		<p class="input-group" ng-repeat="keyword in keywords track by $index"
+			style="padding: 5px 10px;">
+			class="form-control"> <span class="input-group-btn">
 				<button class="btn btn-danger" ng-click="removeKeyword ($index)"
-					aria-label="Remove"><span class="glyphicon glyphicon-pencil"></span></button>
+					aria-label="Remove">
+					<span class="glyphicon glyphicon-pencil"></span>
+				</button>
 			</span>
 		</p>
 		<br />

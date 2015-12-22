@@ -9,6 +9,7 @@
 	Now think for yourself. What do you<br/>
 	 think is important in this role,<br/>
 	  that the add does NOT mention?
+	Now think for yourself. What do you <br/> think is important in this role,<br/> that the add does NOT mention?
 </p>
 <br />
 <div class="container">
@@ -16,7 +17,7 @@
 	<form role="form" ng-submit="addKeyword()">
 		<div class="row">
 			<div class="input-group">
-				<input type="text" ng-model="keyword"
+				<input type="text" ng-model="missingkeyword"
 					placeholder="it's important to be..." class="form-control">
 				<span class="input-group-btn"> <input type="submit"
 					class="btn btn-primary" value="Add">
@@ -26,20 +27,20 @@
 	</form>
 
 	<!-- keyword list -->
-	<div ng-model="keywords"
-		id="jobTitle"ui-sortable">
-		<p class="input-group" ng-repeat="keyword in keywords track by $index"
-			style="padding: 5px 10px;">
-			<input type="text" ng-model="keyword"
-				class="form-control"> <span class="input-group-btn">
-				<button class="btn btn-danger" ng-click="removeKeyword ($index)"
-					aria-label="Remove"><span class="glyphicon glyphicon-pencil"></span></button>
-			</span>
-		</p>
-		<br />
-		<button ng-click="goTo()" id="confirm" type="submit" class="btn">Confirm
-			and Continue</button>
 		<br />
 		<p style="margin-left: 6em;">Add 3+ to continue</p>
+		<p class="input-group" ng-repeat="missingkeyword in missingkeywords track by $index" style="padding: 5px 10px;">
+			<input type="text" ng-model="missingkeyword"
+				class="form-control"> <span class="input-group-btn">
+				<button class="btn btn-danger" ng-click="removeKeyword ($index)"
+					aria-label="Remove">
+					<span class="glyphicon glyphicon-pencil"></span>
+				</button>
+			</span>
+		</p>
+		<button style="margin-top:2em;" ng-click="goToPrio()" id="confirm" type="submit" class="btn">Confirm
+			and Continue</button>
+		<br />
+		<p style="margin-left: 6em;">Add 1+ to continue</p>
 	</div>
 </div>

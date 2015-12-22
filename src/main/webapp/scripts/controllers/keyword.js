@@ -12,15 +12,18 @@ angular.module('annons-analys').controller(
 
 						$scope.keywords.push($scope.keyword);
 						$scope.keyword = localStorageService.set('keywords', $scope.keywords);
-						//$scope.keyword = '';
+						// $scope.keyword = '';
+						// localStorageService.set('keywords',
+						// JSON.stringify($scope.keywords));
+						localStorageService.set('keywords', $scope.keywords);
+					// $scope.keyword = '';
 					};
+					
 					$scope.removeKeyword = function(index) {
 						$scope.keywords.splice(index, 1);
-					}
+					};
 					
 					$scope.goTo = function() {
 		                $location.path('missing-keywords');
 		            };
-		            
-		            
 				} ]);

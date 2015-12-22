@@ -9,13 +9,16 @@ angular.module('annons-analys').factory('myFactory', function($http) {
 
 	var jobAdUrl = '/v1/urls';
 
-	return {
-		addUrl : function(url) {
-			return $http.post(jobAdUrl, url);
-		},
-		getTitleFromUrl : function() {
-			return $http.get(jobAdUrl + '/getTitle');
-		}
-	};
+        return {
+            addUrl: function (url) {
+                return $http.post(jobAdUrl, url);
+            },
+            getTitleFromUrl: function() {
+                return $http.get(jobAdUrl + '/getTitle');
+            },
+            getTitleFromPage: function(url) {
+                return $http.get(url);
+            }
+        };
 
 });
