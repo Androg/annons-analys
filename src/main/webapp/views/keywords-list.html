@@ -4,10 +4,17 @@
 
 <div class="container">
 	<div id="jobTitle">
-	<ul>
+	<br />
+		<p>What do you think is most important for Ericsson? Prioritize by
+			drag-and-dropping with the most important at the top.</p>
+	<ul ng-repeat="keyword in keywords track by $index">
 	<li>
+	
+	{{keyword}}
+	
 	</li>
-	</ul>
+	
+	</ul>			
 	
 	</div>
 </div>

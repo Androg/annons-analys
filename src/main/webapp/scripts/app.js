@@ -35,7 +35,7 @@ angular.module('annons-analys', [
       })
           .when('/keywords-list', {
         templateUrl: 'views/keywords-list.html',
-        controller: 'KeysCtrl'
+        controller: 'KeyCtrl'
       })
 
 
