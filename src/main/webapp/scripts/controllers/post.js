@@ -14,7 +14,7 @@ angular.module('annons-analys').controller('PostCtrl',
 
             $scope.newPage = function() {
                 console.log($scope.jobAd);
-                $location.path('login');
+                $location.path('keywords');
             };
 
             myFactory.getTitleFromPage($scope.adress).then(function(response) {

@@ -17,5 +17,9 @@ angular.module('annons-analys').controller(
 					
 					$scope.removeKeyword = function(index) {
 						$scope.keywords.splice(index, 1);
-					}
+					};
+					
+					  $scope.nextPage = function() {
+			                $location.path('missing-keywords');
+			            };
 				} ]);
