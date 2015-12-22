@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb28b620-020c-4be8-83d9-652af13866f5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/services/myFactory.js" afterPath="$PROJECT_DIR$/src/main/webapp/services/myFactory.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/post.html" afterPath="$PROJECT_DIR$/src/main/webapp/views/post.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/scripts/controllers/post.js" afterPath="$PROJECT_DIR$/src/main/webapp/scripts/controllers/post.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="annons-analys.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="post.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/views/post.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.25">
-              <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.23267327">
+              <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -125,11 +123,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="post.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/controllers/post.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30991736">
-              <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -202,8 +200,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/mysql/mysql.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/services/myFactory.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/post.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/scripts/controllers/post.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/post.html" />
       </list>
     </option>
   </component>
@@ -1071,12 +1069,12 @@
       <workItem from="1448547936985" duration="6470000" />
       <workItem from="1448571575798" duration="554000" />
       <workItem from="1448616852798" duration="290000" />
-      <workItem from="1449067683653" duration="21424000" />
+      <workItem from="1449067683653" duration="22159000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52113000" />
+    <option name="totallyTimeSpent" value="52848000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1441,21 +1439,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/post.html">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/controllers/post.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25">
-          <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/controllers/post.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30991736">
-          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-          <folding />
+        <state vertical-scroll-proportion="0.23267327">
+          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

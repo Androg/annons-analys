@@ -18,9 +18,13 @@
                 <p class="alert alert-danger" ng-show="JobAdInfo.JobAd.employer.$error.required && JobAdInfo.JobAd.employer.$dirty"
                    class="alert alert-warning">Required</p>
 
+                <span class="glyphicon glyphicon-globe"></span>
+                <a ng-href="{{ adress }}"> {{ adress }}</a>
+
                 <input id="btn" type="submit" value="Start" class="btn btn-primary"
                        ng-disabled="JobAdInfo.$dirty && JobAdInfo.$invalid" />
             </div>
         </form>
     </div>
+
 </div>
