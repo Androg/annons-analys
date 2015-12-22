@@ -33,6 +33,11 @@ angular.module('annons-analys', [
         templateUrl: 'views/keywords.html',
         controller: 'KeysCtrl'
       })
+          .when('/keywords-list', {
+        templateUrl: 'views/keywords-list.html',
+        controller: 'KeysCtrl'
+      })
+
 
 
 		  localStorageServiceProvider
