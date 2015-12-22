@@ -18,7 +18,11 @@ angular.module('annons-analys').factory('myFactory', function($http) {
             },
             getTitleFrompage: function(url) {
                 return $http.get(url);
+<<<<<<< HEAD
             },
+=======
+            }
+>>>>>>> 598dfe38ad66dd1575398948c9f89141ed5e2bd4
         };
 
 });
