@@ -6,12 +6,16 @@
         <form name="JobAdInfo" ng-submit="newPage()">
             <div role="form">
                 <label for="jobadinfo">The Job You're Looking For</label>
-                <input placeholder="Project Manager" type="text" class="form-control input-sm" ng-model="title.title" required />
-                <p class="alert alert-danger" ng-show="JobAdInfo.title.title.$error.required && JobAdTitle.title.title.$dirty"
+                <input placeholder="{{ list }}" type="text" class="form-control input-sm" ng-model="JobAd.title" required />
+                <p class="alert alert-danger" ng-show="JobAdInfo.JobAd.title.$error.required && JobAdInfo.JobAd.title.$dirty"
                    class="alert alert-warning">Required</p>
 
-                <input placeholder="Eriksson" type="text" class="form-control input-sm" ng-model="title.employer" required />
-                <p class="alert alert-danger" ng-show="JobAdInfo.title.employer.$error.required && JobAdTitle.employer.title.$dirty"
+                <br/>
+                <br/>
+                <br/>
+
+                <input placeholder="Eriksson" type="text" class="form-control input-sm" ng-model="JobAd.employer" required />
+                <p class="alert alert-danger" ng-show="JobAdInfo.JobAd.employer.$error.required && JobAdInfo.JobAd.employer.$dirty"
                    class="alert alert-warning">Required</p>
 
                 <input id="btn" type="submit" value="Start" class="btn btn-primary"

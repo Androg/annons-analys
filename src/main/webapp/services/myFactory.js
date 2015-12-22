@@ -16,7 +16,7 @@ angular.module('annons-analys').factory('myFactory', function($http) {
             getTitleFromUrl: function() {
                 return $http.get(jobAdUrl + '/getTitle');
             },
-            getTitleFrompage: function(url) {
+            getTitleFromPage: function(url) {
                 return $http.get(url);
             }
         };
