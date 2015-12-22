@@ -33,6 +33,10 @@ angular.module('annons-analys', [
         templateUrl: 'views/keywords.html',
         controller: 'KeysCtrl'
       })
+         .when('/missing-keywords', {
+        templateUrl: 'views/missing-keywords.html',
+        controller: 'MissingCtrl'
+      })
           .when('/keywords-list', {
         templateUrl: 'views/keywords-list.html',
         controller: 'KeysCtrl'
