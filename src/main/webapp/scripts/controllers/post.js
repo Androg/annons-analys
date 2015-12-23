@@ -5,7 +5,7 @@ angular.module('annons-analys').controller('PostCtrl',
 
 			$scope.adress = localStorageService.get('key');
 
-            $scope.jobAd = {};
+            $scope.title = {};
 
             myFactory.getTitleFromUrl().then(function(data) {
                 $scope.randomStuffdotExe = data.data;
@@ -13,7 +13,8 @@ angular.module('annons-analys').controller('PostCtrl',
 
 
             $scope.newPage = function() {
-                console.log($scope.jobAd);
+                console.log($scope.title.title);
+                console.log($scope.title.employer);
                 $location.path('keywords');
             };
 

@@ -2,8 +2,9 @@
 
 angular.module('annons-analys').controller(
 		'KeysCtrl',
-		[ '$scope', '$http', 'auth', 'store', '$location', 'localStorageService',
-				function($scope, $http, auth, localStorageService,  store, $location) {
+		[ '$scope', '$http', '$location', 'auth', 'localStorageService', 'store',
+				function($scope, $http, $location, store, auth, localStorageService) {
+
 					$scope.keywords = localStorageService.get('keywords');
 					if($scope.keywords == null){
 						$scope.keywords = [];
@@ -12,14 +13,15 @@ angular.module('annons-analys').controller(
 						$scope.keywords.push($scope.keyword);
 						//localStorageService.set('keywords', JSON.stringify($scope.keywords));
 						localStorageService.set('keywords', $scope.keywords);
-					//	$scope.keyword = '';
+						$scope.keyword = '';
 					};
 					
 					$scope.removeKeyword = function(index) {
 						$scope.keywords.splice(index, 1);
 					};
 					
-					  $scope.nextPage = function() {
-			                $location.path('missing-keywords');
-			            };
+                    $scope.prioThis = function() {
+                        $location.path('missing-keywords');
+                    };
+
 				} ]);

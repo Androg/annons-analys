@@ -11,7 +11,8 @@ angular.module('annons-analys', [
     'as.sortable',
     'auth0',
     'angular-jwt',
-    'angular-storage'
+    'angular-storage',
+    'ngDragDrop'
   ])
   .config(function ($routeProvider, authProvider, localStorageServiceProvider) {
 

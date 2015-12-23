@@ -25,8 +25,7 @@
 	</form>
 
 	<!-- keyword list -->
-	<div ng-model="keywords"
-		id="jobTitle"ui-sortable">
+	<div ng-model="keywords" id="jobTitle" ui-sortable>
 		<p class="input-group" ng-repeat="keyword in keywords track by $index" style="padding: 5px 10px;">
 			<input type="text" ng-model="keyword"
 				class="form-control"> <span class="input-group-btn">
@@ -36,7 +35,7 @@
 				</button>
 			</span>
 		</p>
-		<button style="margin-top:2em;" ng-click="nextPage()" id="confirm" type="submit" class="btn">Confirm
+		<button style="margin-top:2em;" ng-click="prioThis()" id="confirm" type="submit" class="btn">Confirm
 			and Continue</button>
 		<br />
 		<p style="margin-left: 6em;">Add 3+ to continue</p>

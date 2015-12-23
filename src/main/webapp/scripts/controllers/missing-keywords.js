@@ -2,8 +2,8 @@
 
 angular.module('annons-analys').controller(
 		'MissingCtrl',
-		[ '$scope', '$http', '$location', 'auth', 'store', 'localStorageService',
-				function($scope, $location, $http, auth, localStorageService,  store) {
+		[ '$scope', '$location', 'store', 'auth', 'localStorageService',
+				function($scope, $location, store, auth, localStorageService) {
 					$scope.missingkeywords = localStorageService.get('missingkeywords');
 					if($scope.missingkeywords == null){
 						$scope.missingkeywords = [];
