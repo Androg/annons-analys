@@ -15,6 +15,11 @@
 		<ul ng-repeat="missingkeyword in missingkeywords track by $index">
 			<li id="prio" class="form-control">{{missingkeyword}}</li>
 		</ul>
+		
+		<button style="margin-top: 8em;" ng-click="newPage()" id="confirm"
+					type="submit" class="btn"
+					ng-disabled="jobPostForm.$dirty && jobPostForm.$invalid">Confirm
+					and Continue</button>
 
 	</div>
 

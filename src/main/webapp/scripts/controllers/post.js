@@ -12,15 +12,20 @@ angular.module('annons-analys').controller(
 
 					$scope.adress = localStorageService.get('key');
 
-					$scope.jobAd = {};
+					$scope.title = localStorageService.get('position'),
+								   localStorageService.get('employer');
+					if($scope.title == null){
+						$scope.title = {};
+					}
 
 					myFactory.getTitleFromUrl().then(function(data) {
 						$scope.randomStuffdotExe = data.data;
 					});
 
 					$scope.newPage = function() {
-						console.log($scope.jobAd);
-						$location.path('keywords');
+						$location.path('login');
+						localStorageService.set('position', $scope.title.title);
+						localStorageService.set('employer', $scope.title.employer);
 					};
 
 					myFactory.getTitleFromPage($scope.adress).then(
