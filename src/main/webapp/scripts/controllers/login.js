@@ -11,9 +11,9 @@ angular.module('annons-analys').controller(
 						}, function() {
 							// Error callback
 						});
-						
-						   $scope.nextPage = function() {
-				                $location.path('keywords');
-				            };
+
+						$scope.nextPage = function() {
+							$location.path('keywords');
+						};
 					}
 				} ]);

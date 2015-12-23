@@ -10,7 +10,6 @@ angular.module(
 			$routeProvider.when('/', {
 				templateUrl : 'views/main.html',
 				controller : 'MainCtrl',
-				controllerAs : 'main'
 			}).when('/post', {
 				templateUrl : 'views/post.html',
 				controller : 'PostCtrl'
