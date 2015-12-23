@@ -13,18 +13,12 @@
 			<input placeholder="Project Manager" type="text"
 				class="form-control input-sm" ng-model="title.title" required />
 
-			<p class="alert alert-danger"
-				ng-show="JobAdInfo.title.title.$error.required"
-				class="alert alert-warning">Required</p>
 
 			<br /> <br />
 			<p>Employer</p>
 			<input placeholder="Ericsson" type="text"
 				class="form-control input-sm" ng-model="title.employer" required />
 
-			<p class="alert alert-danger"
-				ng-show="JobAdInfo.title.employer.$error.required"
-				class="alert alert-warning">Required</p>
 
             <button ng-disabled="JobAdInfo.$invalid" style="margin-top:3em;" ng-click="newPage()" id="confirm" type="submit" class="btn">Confirm
                 and Continue</button>
