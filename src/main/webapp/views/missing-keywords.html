@@ -25,10 +25,10 @@
 	</form>
 
 	<!-- keyword list -->
-	<div ng-model="keywords" id="jobTitle"ui-sortable">
+	<div ng-model="missingkeyword" id="jobTitle">
 		<p class="input-group"
 			ng-repeat="missingkeyword in missingkeywords track by $index"
-			style="padding: 5px 10px;">
+			style="padding: 5px 10px; cursor: move;">
 			<input type="text" ng-model="missingkeyword" class="form-control">
 			<span class="input-group-btn">
 				<button class="btn btn-danger" ng-click="removeKeyword ($index)"
@@ -38,7 +38,7 @@
 			</span>
 		</p>
 		<button style="margin-top: 2em;" ng-click="goToPrio()" id="confirm"
-			type="submit" class="btn">Confirm and Continue</button>
+			type="submit" class="btn btn-primary">Confirm and Continue</button>
 		<br />
 		<p style="margin-left: 6em;">Add 1+ to continue</p>
 	</div>

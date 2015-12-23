@@ -9,17 +9,15 @@ angular.module('annons-analys').controller(
 				'store',
 				'localStorageService',
 				'$location',
-				function($scope, $http, auth, store, localStorageService,
+				function($scope, $http, auth, localStorageService, store,
 						$location) {
-					$scope.keywords = localStorageService.get('keywords')
+					$scope.keywords = localStorageService.get('keywords');
 					if ($scope.keywords == null) {
 						$scope.keywords = [];
 					}
 					$scope.addKeyword = function() {
-
 						$scope.keywords.push($scope.keyword);
-						$scope.keyword = localStorageService.set('keywords',
-								$scope.keywords);
+						$scope.keyword = '';
 						localStorageService.set('keywords', $scope.keywords);
 					};
 
