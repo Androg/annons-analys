@@ -29,4 +29,7 @@ angular.module('annons-analys').controller(
 					$scope.nextView = function() {
 						$location.path('missing-keywords');
 					};
+
+                    $scope.getKeyword = document.getElementById("keywordId").setAttribute();
+
 				} ]);

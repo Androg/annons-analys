@@ -28,7 +28,7 @@
 	<div ng-model="keyword" id="jobTitle">
 		<p class="input-group" ng-repeat="keyword in keywords track by $index"
 			style="padding:5px 10px; cursor: move;">
-			<input type="text" ng-model="keyword" class="form-control"> <span
+			<input id="keywordId" type="text" ng-model="keyword" class="form-control"> <span
 				class="input-group-btn">
 				<button class="btn btn-danger" ng-click="removeKeyword ($index)"
 					aria-label="Remove">
@@ -39,6 +39,6 @@
 		<button style="margin-top: 2em;" ng-click="nextView()" id="confirm"
 			type="submit" class="btn btn-primary">Confirm and Continue</button>
 		<br />
-		<p style="margin-left: 6em;">Add 3+ to continue</p>
+		<p style="margin-left: 6em;">Add 3+ to continue   {{getKeyword}}</p>
 	</div>
 </div>

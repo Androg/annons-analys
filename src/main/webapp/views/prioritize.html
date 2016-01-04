@@ -9,7 +9,7 @@
 			for Ericsson? Prioritize by drag-and-dropping with the most important
 			at the top.</p>
 		<br />
-		<ul dnd-list="list" ng-repeat="keyword in keywords track by $index">
+		<ul dnd-list="list"  ng-repeat="missingkeyword in missingkeywords track by $index" >
 			<li id="prio"
                 dnd-draggable="missingkeyword"
                 dnd-moved="list.splice($index, 1)"
@@ -17,9 +17,8 @@
                 dnd-selected="models.selected = missingkeyword"
                 ng-class="{'selected': models.selected === missingkeyword}">{{missingkeyword}}</li>
 		</ul>
-		<ul dnd-list="list" ng-repeat="missingkeyword in missingkeywords track by $index">
+		<ul dnd-list="list" ng-repeat="keyword in keywords track by $index">
 			<li id="prio"
-
                 dnd-draggable="keyword"
                 dnd-moved="list.splice($index, 1)"
                 dnd-effect-allowed="move"
