@@ -13,10 +13,10 @@ angular.module('annons-analys')
 
 							$scope.address = localStorageService.get('key');
 
-							$scope.title = {};
+							$scope.title = [];
 							if ($scope.title != null) {
-								localStorageService.get('position'),
-										localStorageService.get('employer');
+							$scope.position = localStorageService.get('position'),
+							$scope.employer	= localStorageService.get('employer');
 							}
 
 							myFactory.getTitleFromUrl().then(function(data) {

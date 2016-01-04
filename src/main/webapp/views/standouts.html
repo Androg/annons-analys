@@ -1,0 +1,23 @@
+<div id="page-header">
+	<p style="padding: 0.4em;" class="glyphicon glyphicon-align-justify"></p>
+</div>
+
+<div class="container">
+	<div id="jobTitle">
+		<br />
+		<p style="margin-left: 1.5em;">
+			Here's what you've come up to so </ br> far. Use this when you write
+			your job </br> application or talk with the employer..
+		</p>
+		<br />
+		<ul ng-repeat="keyword in keywords track by $index">
+			<li id="prio" class="form-control">{{keyword}}</li>
+		</ul>
+		<ul ng-repeat="missingkeyword in missingkeywords track by $index">
+			<li id="prio" class="form-control">{{missingkeyword}}</li>
+		</ul>
+
+
+	</div>
+
+</div>

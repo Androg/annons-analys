@@ -27,12 +27,17 @@
 	<!-- keyword list -->
 	<div ng-model="keyword" id="jobTitle">
 		<p class="input-group" ng-repeat="keyword in keywords track by $index"
-			style="padding:5px 10px; cursor: move;">
+			style="padding: 5px 10px; cursor: move;">
 			<input type="text" ng-model="keyword" class="form-control"> <span
 				class="input-group-btn">
+				<button ng-click="enableEditor(keyword)" class="btn btn-info"
+					data-toggle="modal" data-target="#myModal">
+					<span class="glyphicon glyphicon-pencil"></span>
+				</button>
+			</span> <span class="input-group-btn">
 				<button class="btn btn-danger" ng-click="removeKeyword ($index)"
 					aria-label="Remove">
-					<span class="glyphicon glyphicon-pencil"></span>
+					<span class="glyphicon glyphicon-remove-sign"></span>
 				</button>
 			</span>
 		</p>
@@ -40,5 +45,29 @@
 			type="submit" class="btn btn-primary">Confirm and Continue</button>
 		<br />
 		<p style="margin-left: 6em;">Add 3+ to continue</p>
+	</div>
+
+	<!-- Modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Edit a keyword</h4>
+				</div>
+				<div class="modal-body">
+					<input class="form-control" id="keyword-edit-field" type="text"
+						value="{{selectedKeyword}}">
+				</div>
+				<div class="modal-footer">
+					<button data-dismiss="modal" ng-click="save($event)" class="btn btn-success">
+						<span class="glyphicon glyphicon-ok-sign"></span> Save
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
