@@ -4,12 +4,12 @@ angular.module(
 		'annons-analys',
 		[ 'LocalStorageModule', 'ngAnimate', 'ngCookies', 'ngResource',
 				'ngRoute', 'ngSanitize', 'ngTouch', 'as.sortable', 'auth0',
-				'angular-jwt', 'angular-storage' ]).config(
+				'angular-jwt', 'angular-storage', 'dndLists' ]).config(
 		function($routeProvider, authProvider, localStorageServiceProvider) {
 
 			$routeProvider.when('/', {
 				templateUrl : 'views/main.html',
-				controller : 'MainCtrl',
+				controller : 'MainCtrl'
 			}).when('/post', {
 				templateUrl : 'views/post.html',
 				controller : 'PostCtrl'

@@ -10,31 +10,30 @@
 				<br /> <br />
 				<p>Position you're looking for</p>
 				<input placeholder="Project Manager" type="text"
-					class="form-control input-sm" ng-model="title.title" required />
+					class="form-control input-sm" ng-model="title.title" required>
 
-				<p class="alert alert-danger"
-					ng-show="JobAdInfo.title.title.$error.required && JobAdTitle.title.title.$dirty"
-					class="alert alert-warning">Required</p>
+				<!--  <p class="alert alert-danger"
+					ng-show="JobAdInfo.title.title.$error.required"
+					class="alert alert-warning">Required</p>-->
 
 				<br /> <br />
 				<p>Employer</p>
 				<input placeholder="Ericsson" type="text"
-					class="form-control input-sm" ng-model="title.employer" required />
-				<p class="alert alert-danger"
-					ng-show="JobAdInfo.title.employer.$error.required && JobAdTitle.employer.title.$dirty"
-					class="alert alert-warning">Required</p>
+					class="form-control input-sm" ng-model="title.employer" required>
 
-				<br /> <br /> <span class="glyphicon glyphicon-globe"><a
-					id="url" ng-href="{{ adress }}"> {{ adress }}</a></span>
+				<!-- <p class="alert alert-danger"
+					ng-show="JobAdInfo.title.employer.$error.required"
+					class="alert alert-warning">Required</p> -->
+				<div>
+					<br /> <br /> <span class="glyphicon glyphicon-globe"><a
+						id="url" ng-href="{{ address }}"> {{ address }}</a></span>
+				</div>
+
+				<input id="confirm" style="margin-top: 2.5em;" type="submit"
+					value="Confirm and Continue" class="btn btn-primary"
+					ng-disabled="jobAdInfo.$dirty && jobAdInfo.$invalid" />
 
 
-				<p class="alert alert-danger"
-					ng-show="jobPostForm.url.$error.required && JobPostForm.url.$dirty"
-					class="alert alert-warning">Required</p>
-				<button style="margin-top: 3em;" ng-click="newPage()" id="confirm"
-					type="submit" class="btn"
-					ng-disabled="jobPostForm.$dirty && jobPostForm.$invalid">Confirm
-					and Continue</button>
 			</div>
 		</form>
 	</div>

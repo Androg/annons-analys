@@ -18,6 +18,7 @@ angular.module('annons-analys').controller(
 					}
 					$scope.addKeyword = function() {
 						$scope.missingkeywords.push($scope.missingkeyword);
+						$scope.missingkeyword = '';
 						localStorageService.set('missingkeywords',
 								$scope.missingkeywords);
 					};
