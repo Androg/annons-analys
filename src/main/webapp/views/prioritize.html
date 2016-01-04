@@ -4,34 +4,23 @@
 
 <div class="container">
 	<div id="jobTitle">
-	<br />
-		<p>What do you think is most important for Ericsson? Prioritize by
-			drag-and-dropping with the most important at the top.</p>
-        <!-- The dnd-list directive allows to drop elements into it.
-         The dropped data will be added to the referenced list -->
-        <ul dnd-list="list">
-            <!-- The dnd-draggable directive makes an element draggable and will
-                 transfer the object that was assigned to it. If an element was
-                 dragged away, you have to remove it from the original list
-                 yourself using the dnd-moved attribute -->
-            <li ng-repeat="missingkeyword in missingkeywords track by $index"
-                dnd-draggable="missingkeywords"
-                dnd-moved="list.splice($index, 1)"
-                dnd-effect-allowed="move"
-                dnd-selected="models.selected = missingkeywords"
-                ng-class="{'selected': models.selected === missingkeywords}">
-                {{missingkeyword}}
-            </li>
-        </ul>
-        <ul dnd-list="list">
-            <li ng-repeat="keyword in keywords track by $index"
-                dnd-draggable="keywords"
-                dnd-moved="list.splice($index, 1)"
-                dnd-effect-allowed="move"
-                dnd-selected="models.selected = keywords"
-                ng-class="{'selected': models.selected === keywords}">
-                {{keyword}}
-            </li>
-	    </ul>
+		<br />
+		<p style="margin-left: 1.5em;">What do you think is most important
+			for Ericsson? Prioritize by drag-and-dropping with the most important
+			at the top.</p>
+		<br />
+		<ul ng-repeat="keyword in keywords track by $index">
+			<li id="prio" class="form-control">{{keyword}}</li>
+		</ul>
+		<ul ng-repeat="missingkeyword in missingkeywords track by $index">
+			<li id="prio" class="form-control">{{missingkeyword}}</li>
+		</ul>
+		
+		<button style="margin-top: 8em;" ng-click="newPage()" id="confirm"
+					type="submit" class="btn"
+					ng-disabled="jobPostForm.$dirty && jobPostForm.$invalid">Confirm
+					and Continue</button>
+
 	</div>
+
 </div>

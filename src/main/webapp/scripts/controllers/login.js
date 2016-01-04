@@ -7,9 +7,13 @@ angular.module('annons-analys').controller(
 							// Success callback
 							store.set('profile', profile);
 							store.set('token', token);
-							$location.path('post');
+							$location.path('keywords');
 						}, function() {
 							// Error callback
 						});
+
+						$scope.nextPage = function() {
+							$location.path('keywords');
+						};
 					}
 				} ]);
