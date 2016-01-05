@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 public class Employer extends AbstractEntity
 {
 
-    @Column(name="company")
+    @Column(nullable = false)
     private String company;
 
     protected Employer() {

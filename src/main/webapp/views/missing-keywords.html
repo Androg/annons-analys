@@ -1,45 +1,74 @@
 <div id="page-header">
-	<p style="padding: 0.4em;" class="glyphicon glyphicon-align-justify"></p>
+    <p style="padding: 0.4em;" class="glyphicon glyphicon-align-justify"></p>
 </div>
 
 <br />
 <br />
 
 <p id="description">
-	Now think for yourself. What do you <br /> think is important in this
-	role,<br /> that the add does NOT mention?
+    Now think for yourself. What do you think is </br> important in a role a
+    {{position}} Based on your experience,</br> is there anything you think is
+    important,</br> that the add does NOT mention?"
 </p>
 <br />
 <div class="container">
-	<!-- keyword input -->
-	<form role="form" ng-submit="addKeyword()">
-		<div class="row">
-			<div class="input-group">
-				<input type="text" ng-model="missingkeyword"
-					placeholder="it's important to be..." class="form-control">
+    <!-- keyword input -->
+    <form role="form" ng-submit="addKeyword()">
+        <div class="row">
+            <div class="input-group">
+                <input type="text" ng-model="missingkeyword"
+                       placeholder="it's important to be..." class="form-control">
 				<span class="input-group-btn"> <input type="submit"
-					class="btn btn-primary" value="Add">
+                                                      class="btn btn-primary" value="Add">
 				</span>
-			</div>
-		</div>
-	</form>
+            </div>
+        </div>
+    </form>
 
-	<!-- keyword list -->
-	<div ng-model="missingkeyword" id="jobTitle">
-		<p class="input-group"
-			ng-repeat="missingkeyword in missingkeywords track by $index"
-			style="padding: 5px 10px; cursor: move;">
-			<input type="text" ng-model="missingkeyword" class="form-control">
+    <!-- keyword list -->
+    <div ng-model="missingkeyword" id="jobTitle">
+        <p class="input-group"
+           ng-repeat="missingkeyword in missingkeywords track by $index"
+           style="padding: 5px 10px; cursor: move;">
+            <input type="text" ng-model="missingkeyword" class="form-control">
 			<span class="input-group-btn">
+				<button ng-click="enableEditor(missingkeyword)" class="btn btn-info"
+                        data-toggle="modal" data-target="#myModal">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </button>
+			</span> <span class="input-group-btn">
 				<button class="btn btn-danger" ng-click="removeKeyword ($index)"
-					aria-label="Remove">
-					<span class="glyphicon glyphicon-pencil"></span>
-				</button>
+                        aria-label="Remove">
+                    <span class="glyphicon glyphicon-remove-sign"></span>
+                </button>
 			</span>
-		</p>
-		<button style="margin-top: 2em;" ng-click="goToPrio()" id="confirm"
-			type="submit" class="btn btn-primary">Confirm and Continue</button>
-		<br />
-		<p style="margin-left: 6em;">Add 1+ to continue</p>
-	</div>
+        </p>
+        <button style="margin-top: 2em;" ng-click="goToPrio()" id="confirm"
+                type="submit" class="btn btn-primary">Confirm and Continue</button>
+        <br />
+        <p style="margin-left: 6em;">Add 1+ to continue</p>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Edit a keyword</h4>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control" id="keyword-edit-field" type="text"
+                           value="{{selectedKeyword}}">
+                </div>
+                <div class="modal-footer">
+                    <button data-dismiss="modal" ng-click="save($event)" class="btn btn-success">
+                        <span class="glyphicon glyphicon-ok-sign"></span> Save
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

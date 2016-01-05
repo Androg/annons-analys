@@ -38,5 +38,4 @@ public class EmployerResource {
         throw new BadRequestException();
     }
 
-
 }

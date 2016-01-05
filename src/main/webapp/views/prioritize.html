@@ -9,27 +9,25 @@
 			for Ericsson? Prioritize by drag-and-dropping with the most important
 			at the top.</p>
 		<br />
-		<ul dnd-list="list"  ng-repeat="missingkeyword in missingkeywords track by $index" >
-			<li id="prio"
+		<ul dnd-list="missingkeywords"  ng-repeat="missingkeyword in missingkeywords track by $index" >
+			<li id="prio" class="form-control"
                 dnd-draggable="missingkeyword"
-                dnd-moved="list.splice($index, 1)"
+                dnd-moved="missingkeywords.splice($index, 1)"
                 dnd-effect-allowed="move"
                 dnd-selected="models.selected = missingkeyword"
                 ng-class="{'selected': models.selected === missingkeyword}">{{missingkeyword}}</li>
 		</ul>
-		<ul dnd-list="list" ng-repeat="keyword in keywords track by $index">
-			<li id="prio"
+		<ul dnd-list="keywords" ng-repeat="keyword in keywords track by $index">
+			<li id="prio" class="form-control"
                 dnd-draggable="keyword"
-                dnd-moved="list.splice($index, 1)"
+                dnd-moved="keywords.splice($index, 1)"
                 dnd-effect-allowed="move"
                 dnd-selected="models.selected = keyword"
                 ng-class="{'selected': models.selected === keyword}">{{keyword}}</li>
 		</ul>
 
-		<button style="margin-top: 8em;" ng-click="newPage()" id="confirm"
-			type="submit" class="btn btn-primary"
-			ng-disabled="jobPostForm.$dirty && jobPostForm.$invalid">Confirm
-			and Continue</button>
+        <button style="margin-top: 8em;" ng-click="done()" id="confirm"
+                type="submit" class="btn btn-primary">Confirm and Continue</button>
 
 	</div>
 

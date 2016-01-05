@@ -25,7 +25,10 @@ angular.module(
 			}).when('/prioritize', {
 				templateUrl : 'views/prioritize.html',
 				controller : 'PrioCtrl'
-			})
+			}).when('/standouts', {
+                templateUrl: 'views/standouts.html',
+                controller: 'StandsCtrl'
+            });
 
 			localStorageServiceProvider.setPrefix('annons-analys')
 					.setStorageType('localStorage').setNotify(true, true);
