@@ -5,11 +5,10 @@ angular.module('annons-analys').controller(
 		[
 				'$scope',
 				'$http',
-				'auth',
 				'store',
 				'localStorageService',
 				'$location',
-				function($scope, $http, auth, localStorageService, store,
+				function($scope, $http, localStorageService, store,
 						$location) {
 
 					$scope.done = function() {
