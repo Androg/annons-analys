@@ -24,7 +24,7 @@ angular.module('annons-analys')
 							});
 
 							$scope.newPage = function() {
-								$location.path('login');
+								$location.path('keywords');
 								localStorageService.set('position',
 										$scope.title.title);
 								localStorageService.set('employer',

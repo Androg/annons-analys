@@ -11,7 +11,9 @@
 <!-- endbower -->
 <!-- endbuild -->
 <!-- build:css(.tmp) styles/main.css -->
-<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/main.css">
+ 	<link href="assets/sortable/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/sortable/css/jquery-ui.min.css" rel="stylesheet">
 <!-- endbuild -->
 </head>
 <body ng-app="annons-analys">
@@ -44,23 +46,17 @@
 	<!-- bower:js -->
 	<script src="assets/bower_components/jquery/dist/jquery.js"></script>
 	<script src="assets/bower_components/angular/angular.js"></script>
-	<script
-		src="assets/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
-	<script
-		src="assets/bower_components/angular-animate/angular-animate.js"></script>
-	<script
-		src="assets/bower_components/angular-cookies/angular-cookies.js"></script>
-	<script
-		src="assets/bower_components/angular-resource/angular-resource.js"></script>
+	<script src="assets/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+	<script src="assets/bower_components/angular-animate/angular-animate.js"></script>
+	<script src="assets/bower_components/angular-cookies/angular-cookies.js"></script>
+	<script src="assets/bower_components/angular-resource/angular-resource.js"></script>
 	<script src="assets/bower_components/angular-route/angular-route.js"></script>
-	<script
-		src="assets/bower_components/angular-sanitize/angular-sanitize.js"></script>
+	<script src="assets/bower_components/angular-sanitize/angular-sanitize.js"></script>
 	<script src="assets/bower_components/angular-touch/angular-touch.js"></script>
 	<script src="assets/bower_components/ng-sortable/dist/ng-sortable.js"></script>
-	<script
-		src="assets/bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
-	<script src="assets/drag-and-drop/angular-drag-and-drop-lists.js"></script>
-
+	<script src="assets/bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+	<script src="assets/bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="assets/bower_components/angular-ui-sortable/sortable.js"></script>
 	<!-- We use client cookies to save the user credentials -->
 	<script src="//code.angularjs.org/1.2.16/angular-cookies.min.js"></script>
 
@@ -72,7 +68,6 @@
 	<script type="text/javascript"
 		src="//cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>
 
-	<script src="//cdn.auth0.com/w2/auth0-angular-4.js">
 		
 	</script>
 

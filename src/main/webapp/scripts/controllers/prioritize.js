@@ -5,18 +5,17 @@ angular.module('annons-analys').controller(
 		[
 				'$scope',
 				'$http',
-				'auth',
 				'store',
 				'localStorageService',
 				'$location',
-				function($scope, $http, auth, localStorageService, store,
+				function($scope, $http, localStorageService, store,
 						$location) {
 
 					$scope.done = function() {
 						$location.path('standouts');
 					};
 
-					$scope.keywords = localStorageService.get('keywords');
+					$scope.keywords = localStorageService.get("keywords");
 					$scope.missingkeywords = localStorageService
 							.get('missingkeywords');
 

@@ -9,22 +9,17 @@
 			for Ericsson? Prioritize by drag-and-dropping with the most important
 			at the top.</p>
 		<br />
-		<ul dnd-list="list" ng-repeat="keyword in keywords track by $index">
-			<li id="prio" class="form-control" dnd-draggable="keyword"
-				dnd-moved="list.splice($index, 1)" dnd-effect-allowed="move"
-				dnd-selected="models.selected = keyword"
-				ng-class="{'selected': models.selected === keyword}">{{keyword}}</li>
-		</ul>
-		<ul dnd-list="list" ng-repeat="missingkeyword in missingkeywords track by $index">
-			<li id="prio" class="form-control" dnd-draggable="missingkeyword"
-				dnd-moved="list.splice($index, 1)" dnd-effect-allowed="move"
-				dnd-selected="models.selected = missingkeyword"
-				ng-class="{'selected': models.selected === missingkeyword}">{{missingkeyword}}</li>
-		</ul>
 
-		<button style="margin-top: 8em;" ng-click="done()" id="confirm"
-			type="submit" class="btn btn-primary">Confirm and Continue</button>
-
+		<ul ui-sortable ng-model="keywords">
+			<li class="alert alert-info nomargin"
+				ng-repeat="keyword in keywords track by $index"
+				style="cursor: move;">{{keyword}}</li>
+		</ul>
+		<ul ui-sortable ng-model="missingkeywords">
+			<li class="alert alert-info nomargin"
+				ng-repeat="missingkeyword in missingkeywords track by $index"
+				style="cursor: move;">{{missingkeyword}}</li>
+		</ul>
 	</div>
-
+</div>
 </div>
