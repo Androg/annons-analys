@@ -11,4 +11,9 @@ public class ServiceConfig
     public JobAdsService jobAdsService() {
         return new JobAdsService();
     }
+
+    @Bean
+    public EmployerService employerService() {
+        return new EmployerService();
+    }
 }

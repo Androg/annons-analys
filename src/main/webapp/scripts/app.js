@@ -35,10 +35,8 @@ angular.module(
 					}).when('/standouts', {
 						templateUrl : 'views/standouts.html',
 						controller : 'StandsCtrl'
-					}).when('/demo', {
-						templateUrl : 'views/demo.html',
-						controller : 'sortableCtrl'
 					})
+
 
 					localStorageServiceProvider.setPrefix('annons-analys')
 							.setStorageType('localStorage').setNotify(true,

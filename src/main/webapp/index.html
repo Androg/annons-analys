@@ -16,23 +16,29 @@
     <link href="assets/sortable/css/jquery-ui.min.css" rel="stylesheet">
 <!-- endbuild -->
 </head>
+
 <body ng-app="annons-analys">
-	<script>
-		(function(h, o, t, j, a, r) {
-			h.hj = h.hj || function() {
-				(h.hj.q = h.hj.q || []).push(arguments)
-			};
-			h._hjSettings = {
-				hjid : 127480,
-				hjsv : 5
-			};
-			a = o.getElementsByTagName('head')[0];
-			r = o.createElement('script');
-			r.async = 1;
-			r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-			a.appendChild(r);
-		})(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
-	</script>
+
+    <script>
+
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:127480,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-72006401-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
 	<!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -44,7 +50,6 @@
 
 	<!-- build:js(.) scripts/vendor.js -->
 	<!-- bower:js -->
-	<script src="assets/bower_components/jquery/dist/jquery.js"></script>
 	<script src="assets/bower_components/angular/angular.js"></script>
 	<script src="assets/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
 	<script src="assets/bower_components/angular-animate/angular-animate.js"></script>
@@ -63,17 +68,15 @@
 	<!-- Auth0 Lock script and AngularJS module -->
 	<script src="//cdn.auth0.com/js/lock-7.12.min.js"></script>
 	<!-- angular-jwt and angular-storage -->
-	<script type="text/javascript"
-		src="//cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js"></script>
-	<script type="text/javascript"
-		src="//cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>
+	<script type="text/javascript" src="//cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js"></script>
+	<script type="text/javascript" src="//cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>
 
 		
 	</script>
+	<script src="//cdn.auth0.com/w2/auth0-angular-4.js"></script>
 
 	<!-- Setting the right viewport -->
-	<meta name="viewport"
-		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<!-- endbower -->
 	<!-- endbuild -->
 
@@ -88,6 +91,7 @@
 	<script src="scripts/controllers/prioritize.js"></script>
 	<script src="scripts/controllers/standouts.js"></script>
 	<script src="services/myFactory.js"></script>
+    <script src="scripts/controllers/standouts.js"></script>
 
 	<!-- endbuild -->
 </body>
