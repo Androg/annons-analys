@@ -36,8 +36,6 @@ public final class JobAdResource {
 	@POST
 	public final Response createUrl(@Context UriInfo uriInfo, JobAd jobAd) throws IOException {
 		JobAd result = service.createJobAd(jobAd);
-		String title = getTitleFromUrl(result.getUrl());
-		service.saveTitleToDatabase(title);
 		if (result != null) {
 			URI uri = uriInfo.getAbsolutePathBuilder().path(result.getUrl()).build();
 			return Response.created(uri).entity(result).build();
@@ -45,10 +43,6 @@ public final class JobAdResource {
 		throw new BadRequestException();
 	}
 
-	public final String getTitleFromUrl(String url) throws IOException {
-		Document doc = Jsoup.connect(url).get();
-		return doc.select("h1").text();
-	}
 
 	@GET
 	@Path("/getTitle")

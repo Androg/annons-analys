@@ -12,10 +12,12 @@ angular
 						'$location',
 						function($scope, $http, localStorageService,
 								store, $location) {
-							$scope.position = localStorageService
-									.get('position');
+
+							$scope.position = localStorageService.get('annons-analys.position');
+
 							$scope.missingkeywords = localStorageService
 									.get('missingkeywords');
+
 							if ($scope.missingkeywords == null) {
 								$scope.missingkeywords = [];
 							}
