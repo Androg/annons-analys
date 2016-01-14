@@ -8,9 +8,8 @@ angular.module('annons-analys').controller(
 				'store',
 				'localStorageService',
 				'$location',
-                'myFactory',
 				function($scope, $http, localStorageService, store,
-						$location, myFactory) {
+						$location) {
 					$scope.editorEnabled = false;
 
 					$scope.keywords = localStorageService.get('keywords');
@@ -29,8 +28,6 @@ angular.module('annons-analys').controller(
 					};
 
 					$scope.nextView = function() {
-                        console.log('{ keyword : ' + '"' +$scope.keywords  + '"}');
-                        myFactory.saveKeywordsToDatabase('{ keyword : ' + '"' +$scope.keywords  + '"}');
 						$location.path('missing-keywords');
 					};
 

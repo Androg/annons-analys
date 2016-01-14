@@ -7,19 +7,19 @@ import javax.persistence.Entity;
 public class Keywords extends AbstractEntity {
 
     @Column(nullable = false)
-    private String keyword;
+    private String keywords;
 
-    protected Keywords(){}
+    protected Keywords() {}
 
-    public Keywords(String keyword) {
-        this.keyword = keyword;
+    public Keywords(String keywords) {
+        this.keywords = keywords;
     }
 
-    public String getKeyword() {
-        return keyword;
+    public String getKeywords() {
+        return keywords;
     }
 
-    public void setKeyword(String keyword) {
-        this.keyword = keyword;
+    public void setKeywords(String keywords) {
+        this.keywords = keywords;
     }
 }

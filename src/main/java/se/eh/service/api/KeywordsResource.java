@@ -31,7 +31,7 @@ public class KeywordsResource {
     public final Response createUrl(@Context UriInfo uriInfo, Keywords keywords) throws IOException {
         Keywords result = service.createKeywords(keywords);
         if (result != null) {
-            URI uri = uriInfo.getAbsolutePathBuilder().path(result.getKeyword()).build();
+            URI uri = uriInfo.getAbsolutePathBuilder().path(String.valueOf(result.getKeywords())).build();
             return Response.created(uri).entity(result).build();
         }
         throw new BadRequestException();

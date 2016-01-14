@@ -12,7 +12,7 @@ public class KeywordsService {
     private KeywordsRepository keywordsRepository;
 
     public Keywords createKeywords(Keywords keywords) {
-        Keywords createdKeywords = new Keywords(keywords.getKeyword());
+        Keywords createdKeywords = new Keywords(keywords.getKeywords());
         return keywordsRepository.save(createdKeywords);
     }
 }
