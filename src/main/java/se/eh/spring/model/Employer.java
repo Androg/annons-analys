@@ -8,20 +8,32 @@ public class Employer extends AbstractEntity
 {
 
     @Column(nullable = false)
-    private String company;
+    private String title;
+
+    @Column(nullable = false)
+    private String employer;
 
     protected Employer() {
     }
 
-    public Employer(String company) {
-        this.company = company;
+    public Employer(String title, String employer) {
+        this.title = title;
+        this.employer = employer;
     }
 
-    public String getCompany() {
-        return company;
+    public String getTitle() {
+        return title;
     }
 
-    public void setCompany(String company) {
-        this.company = company;
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getEmployer() {
+        return employer;
+    }
+
+    public void setEmployer(String employer) {
+        this.employer = employer;
     }
 }

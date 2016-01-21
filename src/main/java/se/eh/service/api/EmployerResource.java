@@ -32,7 +32,7 @@ public class EmployerResource {
     public final Response createUrl(@Context UriInfo uriInfo, Employer employer) throws IOException {
         Employer result = service.createEmployer(employer);
         if (result != null) {
-            URI uri = uriInfo.getAbsolutePathBuilder().path(result.getCompany()).build();
+            URI uri = uriInfo.getAbsolutePathBuilder().path(String.valueOf(result)).build();
             return Response.created(uri).entity(result).build();
         }
         throw new BadRequestException();

@@ -14,8 +14,14 @@ angular
 								$location) {
 							$scope.position = localStorageService
 									.get('position');
+							
+							$scope.position = localStorageService.get('annons-analys.position');
+                            $scope.keywords = localStorageService.get('keywords');
+                            $scope.allKeywords = [];
+
 							$scope.missingkeywords = localStorageService
 									.get('missingkeywords');
+
 							if ($scope.missingkeywords == null) {
 								$scope.missingkeywords = [];
 							}
@@ -40,7 +46,7 @@ angular
 								});
 								
 								localStorageService.set('missingkeywords', missingkeywords);
-								
+
 								$location.path('prioritize');
 								
 							};

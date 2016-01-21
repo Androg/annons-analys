@@ -12,7 +12,7 @@ public final class EmployerService {
     private EmployerRepository employerRepository;
 
     public Employer createEmployer(Employer employer) {
-        Employer createdEmployer = new Employer(employer.getCompany());
+        Employer createdEmployer = new Employer(employer.getTitle(), employer.getEmployer());
         return employerRepository.save(createdEmployer);
     }
 }

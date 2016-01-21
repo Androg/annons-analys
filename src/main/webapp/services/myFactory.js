@@ -8,16 +8,18 @@
 angular.module('annons-analys').factory('myFactory', function($http) {
 
 	var jobAdUrl = '/v1/urls';
+    var jobAdEmpPos = 'v1/employer';
+    var jobAdKeywords = 'v1/keywords';
 
         return {
             addUrl: function (url) {
                 return $http.post(jobAdUrl, url);
             },
-            getTitleFromUrl: function() {
-                return $http.get(jobAdUrl + '/getTitle');
+            saveEmployerAndPosition: function (post) {
+                return $http.post(jobAdEmpPos, post);
             },
-            getTitleFromPage: function(url) {
-                return $http.get(url);
+            saveKeywordsToDatabase: function (keywords) {
+                return $http.post(jobAdKeywords, keywords);
             }
         };
 

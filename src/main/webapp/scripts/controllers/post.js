@@ -18,22 +18,13 @@ angular.module('annons-analys')
 										localStorageService.get('employer');
 							}
 
-							myFactory.getTitleFromUrl().then(function(data) {
-								$scope.randomStuffdotExe = data.data;
-							});
-
 							$scope.newPage = function() {
+                                localStorageService.set('position', $scope.title.title);
+                                localStorageService.set('employer', $scope.title.employer);
+                                myFactory.saveEmployerAndPosition($scope.title);
 								$location.path('keywords');
-								localStorageService.set('position',
-										$scope.title.title);
-								localStorageService.set('employer',
-										$scope.title.employer);
 							};
 
-							myFactory.getTitleFromPage($scope.adress).then(
-									function(response) {
-										$scope.list = response.document
-												.getElementsByTagName('title');
-									})
+							$scope.list = localStorageService.get('employer');
 
 						} ]);

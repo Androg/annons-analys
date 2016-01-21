@@ -37,6 +37,14 @@ display: flex;
 	word-wrap: break-word;
 }
 
+#invalidUrl {
+    background-color: #FF0000;
+}
+
+#alertInvalidUrl {
+  margin-right: 10px;
+}
+
 
 form {
 	max-width: 320px;

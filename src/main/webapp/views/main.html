@@ -5,16 +5,16 @@
 </div>
 <br />
 
-<div class="container">
 
 <div class="container"><my-progressbar></my-progressbar></div>
 
 	<div id="jobPost">
-		<form name="jobPostForm" ng-submit="sendForm()">
-			<div role="form">
+		<form name="jobPostForm" ng-submit="validateURL(url.url)">
+		<div role="form">
 				<label for="jobPost">Job Post</label> <input placeholder="url"
 					type="text" class="form-control input-sm" ng-model="url.url"
 					required />
+            <p id="invalidUrl" class="ng-hide"><span id="alertInvalidUrl"class="glyphicon glyphicon-alert"></span>Please enter a valid url!</p>
 				<p class="alert alert-danger"
 					ng-show="jobPostForm.url.$error.required"
 					class="alert alert-warning">Required</p>
@@ -23,4 +23,3 @@
 			</div>
 		</form>
 	</div>
-</div>
