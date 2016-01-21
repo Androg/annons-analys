@@ -5144,7 +5144,8 @@ button.close {
 
 #description {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin-left: 8em; }
 
 #accountCreate {
   margin-left: 4em; }

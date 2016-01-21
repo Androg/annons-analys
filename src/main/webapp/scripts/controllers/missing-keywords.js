@@ -20,11 +20,9 @@ angular
 								$scope.missingkeywords = [];
 							}
 							$scope.addKeyword = function() {
-								$scope.missingkeywords
-										.push($scope.missingkeyword);
+								$scope.missingkeywords.push($scope.missingkeyword);
 								$scope.missingkeyword = '';
-								localStorageService.set('missingkeywords',
-										$scope.missingkeywords);
+								localStorageService.set('missingkeywords',$scope.missingkeywords);
 							};
 
 							$scope.removeKeyword = function(index) {
@@ -34,25 +32,16 @@ angular
 							};
 
 							$scope.goToPrio = function() {
+								var $inputs = $("#jobTitle").find("input");
+								
+								var missingkeywords = [];
+								$inputs.each(function() {
+									missingkeywords.push($(this).val());
+								});
+								
+								localStorageService.set('missingkeywords', missingkeywords);
+								
 								$location.path('prioritize');
+								
 							};
-
-							$scope.enableEditor = function(keyword) {
-								$scope.editorEnabled = true;
-								$scope.selectedKeyword = keyword;
-							};
-
-							$scope.save = function($event) {
-								var updatedKeyword = $("#keyword-edit-field")
-										.val();
-								for (var i = 0; i < $scope.missingkeywords.length; i++) {
-									if ($scope.missingkeywords[i] === $scope.selectedKeyword) {
-										$scope.missingkeywords[i] = updatedKeyword;
-										break;
-									}
-								}
-								localStorageService.set('missingkeywords',
-										$scope.missingkeywords);
-							}
-
 						} ]);

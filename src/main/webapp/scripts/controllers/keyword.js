@@ -37,16 +37,4 @@ angular.module('annons-analys').controller(
 
 				} ]);
 
-// $scope.save = function($event) {
-// var updatedKeyword = $("#keyword-edit-field").val();
-// for (var i = 0; i < $scope.keywords.length; i++) {
-// if ($scope.keywords[i] === $scope.selectedKeyword) {
-// $scope.keywords[i] = updatedKeyword;
-// localStorageService.set("keywords", $scope.keywords)
-// break;
-// }
-// }
-
-// localStorageService.set('keywords', $scope.keywords);
-// }
 

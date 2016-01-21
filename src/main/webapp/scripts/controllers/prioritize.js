@@ -8,17 +8,17 @@ angular.module('annons-analys').controller(
 				'store',
 				'localStorageService',
 				'$location',
-				function($scope, $http, localStorageService, store,
-						$location) {
-
-					$scope.done = function() {
-						$location.path('standouts');
-					};
+				function($scope, $http, localStorageService, store, $location) {
 
 					var keywords = localStorageService.get("keywords");
 					var missingKeywords = localStorageService
-					.get('missingkeywords');
+							.get('missingkeywords');
+
+					$scope.allKeywords = keywords.concat(missingKeywords);
 					
-					Array.prototype.push.apply(keywords, missingKeywords);
-					$scope.allKeywords = keywords;
+
+					$scope.done = function() {
+						localStorageService.set('allkeywords', $scope.allKeywords);
+						$location.path('standouts');
+					};
 				} ]);
