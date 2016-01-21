@@ -17,7 +17,8 @@ angular.module('annons-analys').controller(
 					$scope.allKeywords = keywords.concat(missingKeywords);
 					
 
-                    $scope.allKeywords = localStorageService.get('allKeywords');
-
-
+					$scope.done = function() {
+						localStorageService.set('allkeywords', $scope.allKeywords);
+						$location.path('standouts');
+					};
 				} ]);
