@@ -10,8 +10,8 @@ angular
 						'store',
 						'localStorageService',
 						'$location',
-						function($scope, $http, localStorageService,
-								store, $location) {
+						function($scope, $http, localStorageService, store,
+								$location) {
 							$scope.position = localStorageService
 									.get('position');
 							$scope.missingkeywords = localStorageService

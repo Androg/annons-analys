@@ -3,6 +3,12 @@
 </div>
 
 <div class="container">
+	<br />
+	<div class="progress">
+		<div class="progress-bar progress-bar-striped active"
+			role="progressbar" aria-valuenow="40" aria-valuemin="0"
+			aria-valuemax="100" style="width: 80%">80%</div>
+	</div>
 	<div id="jobTitle">
 		<br />
 		<p style="margin-left: 1.5em;">What do you think is most important
@@ -10,15 +16,10 @@
 			at the top.</p>
 		<br />
 
-		<ul ui-sortable ng-model="keywords">
-			<li class="alert alert-info nomargin"
-				ng-repeat="keyword in keywords track by $index"
+		<ul ui-sortable ng-model="allKeywords">
+			<li id="prio" class="form-control"
+				ng-repeat="keyword in allKeywords track by $index"
 				style="cursor: move;">{{keyword}}</li>
-		</ul>
-		<ul ui-sortable ng-model="missingkeywords">
-			<li class="alert alert-info nomargin"
-				ng-repeat="missingkeyword in missingkeywords track by $index"
-				style="cursor: move;">{{missingkeyword}}</li>
 		</ul>
 
 		<button style="margin-top: 8em;" ng-click="done()" id="confirm"

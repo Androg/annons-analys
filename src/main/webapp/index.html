@@ -12,15 +12,22 @@
 <!-- endbuild -->
 <!-- build:css(.tmp) styles/main.css -->
 	<link rel="stylesheet" href="styles/main.css">
- 	<link href="assets/sortable/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/sortable/css/jquery-ui.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="styles/progress-bar.css">
 <!-- endbuild -->
 </head>
 
 <body ng-app="annons-analys">
-
     <script>
 
+    var isUrl = function(url) {
+        if (url === "") {
+            return true;
+        }
+
+        var reg = /^(https?|ftp):\/\/(-\.)?([^\s/?\.#-]+\.?)+(\/[^\s]*)?$/i;
+        return reg.test(url);
+    };
+    
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
         h._hjSettings={hjid:127480,hjsv:5};
@@ -38,6 +45,7 @@
     ga('create', 'UA-72006401-1', 'auto');
     ga('send', 'pageview');
 </script>
+
 
 	<!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -65,6 +73,7 @@
     <script src="assets/bower_components/angular-ui-sortable/sortable.js"></script>
 	<!-- We use client cookies to save the user credentials -->
 	<script src="//code.angularjs.org/1.2.16/angular-cookies.min.js"></script>
+	
 
 	<!-- Auth0 Lock script and AngularJS module -->
 	<script src="//cdn.auth0.com/js/lock-7.12.min.js"></script>
@@ -93,6 +102,7 @@
 	<script src="scripts/controllers/standouts.js"></script>
 	<script src="services/myFactory.js"></script>
     <script src="scripts/controllers/standouts.js"></script>
+    <script src="scripts/directives/progress-bar.js"></script>
 
 	<!-- endbuild -->
 </body>

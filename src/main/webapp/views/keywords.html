@@ -3,7 +3,16 @@
 </div>
 
 <br />
-<br />
+
+<div class="container">
+<div class="container"><my-progressbar3></my-progressbar3></div>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
 
 <p id="description">
 	Read the Job posting. Pick out three <br /> keywords that describe the
@@ -27,31 +36,24 @@
 	<!-- keyword list -->
 	<div ng-model="keyword" id="jobTitle">
 		<p class="input-group" ng-repeat="keyword in keywords track by $index"
-			style="padding: 5px 10px; cursor: move;">
+			style="padding: 5px 10px;">
 			<input type="text" ng-model="keyword" class="form-control"> <span
-				class="input-group-btn">
-				<button ng-click="enableEditor(keyword)" class="btn btn-info"
-					data-toggle="modal" data-target="#myModal">
-					<span class="glyphicon glyphicon-pencil"></span>
-				</button>
-			</span> <span class="input-group-btn">
-				<button class="btn btn-danger" ng-click="removeKeyword ($index)"
-					aria-label="Remove">
-					<span class="glyphicon glyphicon-remove-sign"></span>
-				</button>
+				class="input-group-btn"> </span> <span class="input-group-btn">
+				<button class="btn btn-danger btn-sm" ng-click="removeKeyword ($index)"
+					aria-label="Remove">X</button>
 			</span>
 		</p>
-		<button style="margin-top: 2em;" ng-click="nextView()" id="confirm"
-			type="submit" class="btn btn-primary">Confirm and Continue</button>
+		<button style="margin-top: 2em;" ng-click="nextView($event)"
+			id="confirm" type="submit" class="btn btn-primary">Confirm
+			and Continue</button>
 		<br />
 		<p style="margin-left: 6em;">Add 3+ to continue</p>
 	</div>
 
 	<!-- Modal -->
-	<div id="myModal" class="modal fade" role="dialog">
+	<!-- <div id="myModal" class="modal fade" role="dialog">
 		<div class="modal-dialog">
 
-			<!-- Modal content-->
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"
@@ -68,6 +70,6 @@
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				</div>
 			</div>
-		</div>
-	</div>
+		</div>-->
+</div>
 </div>

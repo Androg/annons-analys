@@ -5176,6 +5176,7 @@ form {
 #prio {
   width: 13em;
   margin-left: 1em;
+  margin: 0.5em;
   text-align: center;
   color: black;
   border-radius: 12px;
