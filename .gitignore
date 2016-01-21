@@ -19,5 +19,8 @@ mysql.properties
 
 contributors.txt
 
+.gitignore
 
 /target/
+
+.idea/workspace.xml
