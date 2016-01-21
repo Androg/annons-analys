@@ -29,8 +29,6 @@ public class KeywordsResource {
 
     @POST
     public final Response keywordToDatabase(@Context final UriInfo uriInfo, final Keywords keywords) throws IOException {
-
-        System.out.println("husse   " + keywords.getKeywords());
         service.createKeywords(keywords.asKeywordArray());
         URI uri = uriInfo.getAbsolutePath();
 

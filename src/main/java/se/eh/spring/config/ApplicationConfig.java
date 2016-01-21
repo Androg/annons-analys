@@ -29,7 +29,7 @@ public class ApplicationConfig
 		dataSourceConfig.setJdbcUrl(env.getRequiredProperty("url"));
 		dataSourceConfig.setUsername(env.getRequiredProperty("username"));
 		dataSourceConfig.setPassword(env.getRequiredProperty("password"));
-		dataSourceConfig.setMaximumPoolSize(500);
+		dataSourceConfig.setMaximumPoolSize(20);
 		dataSourceConfig.setMinimumIdle(2);
 		return new HikariDataSource(dataSourceConfig);
 	}

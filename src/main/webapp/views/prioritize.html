@@ -11,7 +11,7 @@
 		<br />
 
 		<ul ui-sortable ng-model="allKeywords">
-			<li class="alert alert-info nomargin"
+			<li id="prioKeyword" class="alert alert-info nomargin"
 				ng-repeat="keyword in allKeywords track by $index"
 				style="cursor: move;">{{keyword}}</li>
 		</ul>
