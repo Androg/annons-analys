@@ -27,7 +27,12 @@ angular.module('annons-analys').controller(
                             $scope.allKeywords.keywords.push($scope.missingkeywords[i]);
                         }
 
-                        myFactory.saveKeywordsToDatabase($scope.allKeywords);
+                            myFactory.saveKeywordsToDatabase($scope.allKeywords).success(function() {
+
+                            });
+
+
+                        console.log($scope.allKeywords);
 
                     }
 

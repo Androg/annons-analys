@@ -4,7 +4,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import se.eh.spring.model.Keywords;
 import se.eh.spring.service.KeywordsService;
 
-import javax.ws.rs.BadRequestException;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -27,13 +26,16 @@ public class KeywordsResource {
         service = context.getBean(KeywordsService.class);
     }
 
+
     @POST
-    public final Response createUrl(@Context UriInfo uriInfo, Keywords keywords) throws IOException {
-        Keywords result = service.createKeywords(keywords);
-        if (result != null) {
-            URI uri = uriInfo.getAbsolutePathBuilder().path(String.valueOf(result.getKeywords())).build();
-            return Response.created(uri).entity(result).build();
-        }
-        throw new BadRequestException();
+    public final Response keywordToDatabase(@Context final UriInfo uriInfo, final Keywords keywords) throws IOException {
+
+        System.out.println("husse   " + keywords.getKeywords());
+        service.createKeywords(keywords.asKeywordArray());
+        URI uri = uriInfo.getAbsolutePath();
+
+        return Response.created(uri).build();
     }
+
+
 }
