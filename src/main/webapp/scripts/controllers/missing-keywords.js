@@ -14,6 +14,8 @@ angular
 								store, $location) {
 
 							$scope.position = localStorageService.get('annons-analys.position');
+                            $scope.keywords = localStorageService.get('keywords');
+                            $scope.allKeywords = [];
 
 							$scope.missingkeywords = localStorageService
 									.get('missingkeywords');
@@ -36,6 +38,15 @@ angular
 							};
 
 							$scope.goToPrio = function() {
+                                for(var i = 0; i < $scope.keywords.length; i++) {
+                                    $scope.allKeywords.push($scope.keywords[i]);
+                                }
+                                for(var i = 0; i < $scope.missingkeywords.length; i++) {
+                                    $scope.allKeywords.push($scope.missingkeywords[i]);
+                                }
+
+                                localStorageService.set('allKeywords', $scope.allKeywords);
+
 								$location.path('prioritize');
 							};
 

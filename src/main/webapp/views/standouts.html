@@ -10,11 +10,8 @@
         your job </br> application or talk with the employer..
         </p>
         <br />
-        <ul ng-repeat="keyword in keywords track by $index">
+        <ul ng-repeat="keyword in theKeywords track by $index">
             <li id="prio">{{keyword}}</li>
-        </ul>
-        <ul ng-repeat="missingkeyword in missingkeywords track by $index">
-            <li id="prio">{{missingkeyword}}</li>
         </ul>
     </div>
 
