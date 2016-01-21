@@ -38,7 +38,6 @@ angular
 							};
 
 							$scope.goToPrio = function() {
-<<<<<<< HEAD
 
                                 var $inputs = $("#jobTitle").find("input");
 
@@ -57,16 +56,7 @@ angular
                                 }
 
                                 localStorageService.set('allKeywords', $scope.allKeywords);
-=======
-								var $inputs = $("#jobTitle").find("input");
-								
-								var missingkeywords = [];
-								$inputs.each(function() {
-									missingkeywords.push($(this).val());
-								});
-								
-								localStorageService.set('missingkeywords', missingkeywords);
->>>>>>> origin/master
+
 
 								$location.path('prioritize');
 								
