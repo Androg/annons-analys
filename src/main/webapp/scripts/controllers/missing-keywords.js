@@ -38,6 +38,16 @@ angular
 							};
 
 							$scope.goToPrio = function() {
+
+                                var $inputs = $("#jobTitle").find("input");
+
+                                var missingkeywords = [];
+                                $inputs.each(function() {
+                                    missingkeywords.push($(this).val());
+                                });
+
+                                localStorageService.set('missingkeywords', missingkeywords);
+
                                 for(var i = 0; i < $scope.keywords.length; i++) {
                                     $scope.allKeywords.push($scope.keywords[i]);
                                 }
