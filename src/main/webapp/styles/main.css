@@ -5163,6 +5163,10 @@ button.close {
   text-decoration: underline;
   word-wrap: break-word; }
 
+#invalidUrl {
+  background-color: #FF0000;
+  padding-left: 10px; }
+
 form {
   max-width: 320px;
   margin: 0 auto; }
