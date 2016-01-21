@@ -3,13 +3,19 @@
 </div>
 
 <br />
-<br />
 
-<p id="description">
-	Read the Job posting. Pick out three <br /> keywords that describe the
-	<br /> characteristics of the person they're <br /> looking for
-</p>
-<br />
+<div class="container">
+<my-progressbar3></my-progressbar3>
+</div>
+	<br />
+	<br />
+	<br />
+	<br />
+
+<p id="description">Read the job posting. Look for the qualities that employers think is important to do the job.
+<br /> For example, you'll be driven, creative or good at detecting contexts.<br /> (To be able to
+		excel or you will be responsible for the sale are not properties.)</p>
+	<br />
 <div class="container">
 	<!-- keyword input -->
 	<form role="form" ng-submit="addKeyword()">
@@ -27,48 +33,17 @@
 	<!-- keyword list -->
 	<div ng-model="keyword" id="jobTitle">
 		<p class="input-group" ng-repeat="keyword in keywords track by $index"
-			style="padding: 5px 10px; cursor: move;">
+			style="padding: 5px 10px;">
 			<input type="text" ng-model="keyword" class="form-control"> <span
-				class="input-group-btn">
-				<button ng-click="enableEditor(keyword)" class="btn btn-info"
-					data-toggle="modal" data-target="#myModal">
-					<span class="glyphicon glyphicon-pencil"></span>
-				</button>
-			</span> <span class="input-group-btn">
-				<button class="btn btn-danger" ng-click="removeKeyword ($index)"
-					aria-label="Remove">
-					<span class="glyphicon glyphicon-remove-sign"></span>
-				</button>
+				class="input-group-btn"> </span> <span class="input-group-btn">
+				<button class="btn btn-danger btn-sm" ng-click="removeKeyword ($index)"
+					aria-label="Remove">X</button>
 			</span>
 		</p>
-		<button style="margin-top: 2em;" ng-click="nextView()" id="confirm"
-			type="submit" class="btn btn-primary">Confirm and Continue</button>
+		<button style="margin-top: 2em;" ng-click="nextView()"
+			id="confirm" type="submit" class="btn btn-primary">Confirm
+			and Continue</button>
 		<br />
 		<p style="margin-left: 6em;">Add 3+ to continue</p>
-	</div>
-
-	<!-- Modal -->
-	<div id="myModal" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal"
-						aria-hidden="true">&times;</button>
-					<h4 class="modal-title">Edit a keyword</h4>
-				</div>
-				<div class="modal-body">
-					<input class="form-control" id="keyword-edit-field" type="text"
-						value="{{selectedKeyword}}">
-				</div>
-				<div class="modal-footer">
-					<button data-dismiss="modal" ng-click="save($event)" class="btn btn-success">
-						<span class="glyphicon glyphicon-ok-sign"></span> Save
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </button>
-				</div>
-			</div>
-		</div>
 	</div>
 </div>

@@ -3,15 +3,19 @@
 </div>
 
 <div class="container">
+<div>
+	<my-progressbar5></my-progressbar5>
+</div>
+	<br />
 	<div id="jobTitle">
 		<br />
 		<p style="margin-left: 1.5em;">What do you think is most important
-			for Ericsson? Prioritize by drag-and-dropping with the most important
+			for {{ position }}? Prioritize by drag-and-dropping with the most important
 			at the top.</p>
 		<br />
 
 		<ul ui-sortable ng-model="allKeywords">
-			<li id="prioKeyword" class="alert alert-info nomargin"
+			<li id="prio" class="form-control"
 				ng-repeat="keyword in allKeywords track by $index"
 				style="cursor: move;">{{keyword}}</li>
 		</ul>

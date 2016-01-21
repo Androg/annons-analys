@@ -2,16 +2,21 @@
 	<p style="padding: 0.5em;" class="glyphicon glyphicon-align-justify"></p>
 </div>
 
+<br />
 <div class="container">
+<div class="container"><my-progressbar2></my-progressbar2></div>
+	<br />
+	<br />
+	<br />
 	<div id="JobAdInfo">
 		<form name="JobAdInfo" ng-submit="newPage()">
 			<div role="form">
 				<br /> <label for="jobadinfo">The Job You're Looking For</label> <br />
 				<br /> <br />
 				<p>Position you're looking for</p>
-				<input placeholder="Project Manager"
-					ng-model="title.title" type="text" class="form-control input-sm"
-					required><br /> <br />
+				<input placeholder="Project Manager" ng-model="title.title"
+					type="text" class="form-control input-sm" required><br />
+				<br />
 				<p>Employer</p>
 				<input placeholder={{employer}} ng-model="title.employer"
 					type="text" class="form-control input-sm" required>

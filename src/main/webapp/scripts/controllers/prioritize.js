@@ -8,21 +8,17 @@ angular.module('annons-analys').controller(
 				'store',
 				'localStorageService',
 				'$location',
-				function($scope, $http, localStorageService, store,
-						$location) {
+				function($scope, $http, localStorageService, store, $location) {
 
-                    $scope.allKeywords = localStorageService.get('allKeywords');
-                    $scope.newKeywordsOrder = [];
+					var keywords = localStorageService.get("keywords");
+					var missingKeywords = localStorageService
+							.get('missingkeywords');
+
+					$scope.allKeywords = keywords.concat(missingKeywords);
+					
+
 					$scope.done = function() {
-                        var keywordOrder = document.getElementsByTagName('li');
-                        for(var i = 0; i < keywordOrder.length; i++) {
-                            $scope.newKeywordsOrder[i] = keywordOrder[i].innerText;
-                        }
-                        localStorageService.set('allKeywords', $scope.newKeywordsOrder);
+						localStorageService.set('allkeywords', $scope.allKeywords);
 						$location.path('standouts');
 					};
-
-
-
-
 				} ]);

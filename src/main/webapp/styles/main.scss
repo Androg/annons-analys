@@ -11,7 +11,8 @@ $icon-font-path: "../assets/bower_components/bootstrap-sass-official/assets/font
 
 #description {
 display: flex;
-    justify-content: center;	
+    justify-content: center;
+    margin-left: 8em;	
 }
 
 #accountCreate {
@@ -60,6 +61,7 @@ form {
 #prio {
 	width: 13em;
 	margin-left: 1em;
+	margin: 0.5em;
 	
 	text-align: center;
 	color: black;
@@ -214,3 +216,4 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+

@@ -10,9 +10,11 @@ angular
 						'store',
 						'localStorageService',
 						'$location',
-						function($scope, $http, localStorageService,
-								store, $location) {
-
+						function($scope, $http, localStorageService, store,
+								$location) {
+							$scope.position = localStorageService
+									.get('position');
+							
 							$scope.position = localStorageService.get('annons-analys.position');
                             $scope.keywords = localStorageService.get('keywords');
                             $scope.allKeywords = [];
@@ -24,11 +26,9 @@ angular
 								$scope.missingkeywords = [];
 							}
 							$scope.addKeyword = function() {
-								$scope.missingkeywords
-										.push($scope.missingkeyword);
+								$scope.missingkeywords.push($scope.missingkeyword);
 								$scope.missingkeyword = '';
-								localStorageService.set('missingkeywords',
-										$scope.missingkeywords);
+								localStorageService.set('missingkeywords',$scope.missingkeywords);
 							};
 
 							$scope.removeKeyword = function(index) {
@@ -38,6 +38,7 @@ angular
 							};
 
 							$scope.goToPrio = function() {
+<<<<<<< HEAD
 
                                 var $inputs = $("#jobTitle").find("input");
 
@@ -56,26 +57,18 @@ angular
                                 }
 
                                 localStorageService.set('allKeywords', $scope.allKeywords);
+=======
+								var $inputs = $("#jobTitle").find("input");
+								
+								var missingkeywords = [];
+								$inputs.each(function() {
+									missingkeywords.push($(this).val());
+								});
+								
+								localStorageService.set('missingkeywords', missingkeywords);
+>>>>>>> origin/master
 
 								$location.path('prioritize');
+								
 							};
-
-							$scope.enableEditor = function(keyword) {
-								$scope.editorEnabled = true;
-								$scope.selectedKeyword = keyword;
-							};
-
-							$scope.save = function($event) {
-								var updatedKeyword = $("#keyword-edit-field")
-										.val();
-								for (var i = 0; i < $scope.missingkeywords.length; i++) {
-									if ($scope.missingkeywords[i] === $scope.selectedKeyword) {
-										$scope.missingkeywords[i] = updatedKeyword;
-										break;
-									}
-								}
-								localStorageService.set('missingkeywords',
-										$scope.missingkeywords);
-							}
-
 						} ]);

@@ -5144,7 +5144,8 @@ button.close {
 
 #description {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin-left: 8em; }
 
 #accountCreate {
   margin-left: 4em; }
@@ -5182,6 +5183,7 @@ form {
 #prio {
   width: 13em;
   margin-left: 1em;
+  margin: 0.5em;
   text-align: center;
   color: black;
   border-radius: 12px;
