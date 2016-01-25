@@ -15,7 +15,6 @@ angular.module('annons-analys').controller(
 					$scope.keywords = localStorageService.get('keywords');
 					$scope.missingkeywords = localStorageService.get('missingkeywords');
 
-                    $scope.theKeywords = localStorageService.get('allKeywords');
 
                     $scope.allKeywords = { keywords: []};
 
@@ -30,5 +29,7 @@ angular.module('annons-analys').controller(
                         myFactory.saveKeywordsToDatabase($scope.allKeywords);
 
                     }
+
+                    $scope.theKeywords = localStorageService.get('allKeywords');
 
 				} ]);

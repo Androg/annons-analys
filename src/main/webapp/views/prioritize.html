@@ -14,9 +14,9 @@
 			at the top.</p>
 		<br />
 
-		<ul ui-sortable ng-model="allKeywords">
-			<li id="prio" class="form-control"
-				ng-repeat="keyword in allKeywords track by $index"
+		<ul ui-sortable ng-model="theWords">
+			<li id="prio" class="container-fluid"
+				ng-repeat="keyword in theWords track by $index"
 				style="cursor: move;">{{keyword}}</li>
 		</ul>
 
