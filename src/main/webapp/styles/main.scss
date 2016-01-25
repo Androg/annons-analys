@@ -9,11 +9,6 @@ $icon-font-path: "../assets/bower_components/bootstrap-sass-official/assets/font
 
 
 
-#description {
-display: flex;
-    justify-content: center;
-    margin-left: 8em;	
-}
 
 #accountCreate {
 	margin-left: 4em;
@@ -38,7 +33,10 @@ display: flex;
 }
 
 #invalidUrl {
-    background-color: #FF0000;
+  padding: 5px;
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
 }
 
 #alertInvalidUrl {
@@ -68,6 +66,7 @@ form {
 	border-radius: 12px;
 	background-color: lightskyblue
 }
+
 
 #page-header {
   background-size: cover;
@@ -190,16 +189,26 @@ body {
 
 
 
-/* Responsive: Portrait tablets and up
+/* Responsive: Portrait tablets and up */
   @media screen and (min-width: 768px) {
   .container {
     max-width: 730px;
+    }
   }
   
   @media screen and (min-width: 320px) {
   .container {
     max-width: 568px;
-  } */
+    }
+}
+  
+    @media screen and (min-width: 960px) {
+   #description{
+    max-width: 640px;
+    }
+  } 
+  
+ 
 
   /* Remove the padding we set earlier */
   .header,
