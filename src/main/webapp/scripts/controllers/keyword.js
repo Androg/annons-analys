@@ -22,7 +22,6 @@ angular.module('annons-analys').controller(
 					};
 
 					$scope.nextView = function() {
-<<<<<<< HEAD
                         var $inputs = $("#jobTitle").find("input");
 
                         var keywords = [];
@@ -30,7 +29,6 @@ angular.module('annons-analys').controller(
                             keywords.push($(this).val());
                         });
                         localStorageService.set('keywords', keywords);
-=======
 						var $inputs = $("#jobTitle").find("input");
 						
 						var keywords = [];
@@ -40,7 +38,6 @@ angular.module('annons-analys').controller(
 						
 						localStorageService.set('keywords', keywords);
 						
->>>>>>> origin/master
 						$location.path('missing-keywords');
 						
 					};
