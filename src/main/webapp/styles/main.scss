@@ -8,6 +8,12 @@ $icon-font-path: "../assets/bower_components/bootstrap-sass-official/assets/font
 }
 
 
+#invalidUrl {
+padding: 5px;
+color: #b94a48;
+background-color: #f2dede;
+border-color: #eed3d7;
+}
 
 
 #accountCreate {
@@ -32,9 +38,6 @@ $icon-font-path: "../assets/bower_components/bootstrap-sass-official/assets/font
 	word-wrap: break-word;
 }
 
-#invalidUrl {
-    background-color: #FF0000;
-}
 
 #alertInvalidUrl {
   margin-right: 10px;

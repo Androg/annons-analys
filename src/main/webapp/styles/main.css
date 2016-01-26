@@ -5142,6 +5142,12 @@ button.close {
 .glyphicon-align-justify:before {
   font-size: x-large; }
 
+#invalidUrl {
+  padding: 5px;
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7; }
+
 #accountCreate {
   margin-left: 4em; }
 
@@ -5158,9 +5164,6 @@ button.close {
 #url {
   text-decoration: underline;
   word-wrap: break-word; }
-
-#invalidUrl {
-  background-color: #FF0000; }
 
 #alertInvalidUrl {
   margin-right: 10px; }
