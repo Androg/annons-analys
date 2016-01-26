@@ -11,12 +11,10 @@ angular.module('annons-analys').controller(
                 'myFactory',
 				function($scope, $http, localStorageService, store, $location, myFactory) {
 
-					var keywords = localStorageService.get('keywords');
+					var theKeys = {keywords : []};
+					var keywords = localStorageService.get("keywords");
 					var missingKeywords = localStorageService
 							.get('missingkeywords');
-
-                    var theKeys = {keywords : []};
-
 
 					$scope.allKeywords = keywords.concat(missingKeywords);
 
