@@ -11,7 +11,10 @@ angular.module('annons-analys').controller(
 				function($scope, $http, localStorageService, store,
 						$location) {
 
-					$scope.allKeywords = localStorageService.get("allkeywords");
+					$scope.allKeywords = localStorageService.get("allKeywords");
 					$scope.info = localStorageService.get('info');
 					
+
+
+
 				} ]);
