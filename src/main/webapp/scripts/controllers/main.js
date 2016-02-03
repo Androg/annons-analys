@@ -27,4 +27,8 @@ angular.module('annons-analys').controller(
                         }
 
                     }
+                    $scope.start = function () {
+                    	$location.path('main');
+                    }
+                    
 				} ]);

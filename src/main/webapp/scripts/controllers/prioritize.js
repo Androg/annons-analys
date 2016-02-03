@@ -20,7 +20,7 @@ angular.module('annons-analys').controller(
 
 
 					$scope.done = function() {
-						localStorageService.set('allKeywords', $scope.allKeywords);
+						localStorageService.set('allkeywords', $scope.allKeywords);
 
                         for(var i = 0; i < $scope.allKeywords.length; i++) {
                             theKeys.keywords.push($scope.allKeywords[i]);
@@ -28,7 +28,7 @@ angular.module('annons-analys').controller(
                         console.log(theKeys);
                         myFactory.saveKeywordsToDatabase(theKeys);
 
-						$location.path('standouts');
+						$location.path('info');
 					};
 
                     $scope.theWords = localStorageService.get('allKeywords');

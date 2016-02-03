@@ -22,7 +22,7 @@ angular.module('annons-analys')
                                 localStorageService.set('position', $scope.title.title);
                                 localStorageService.set('employer', $scope.title.employer);
                                 myFactory.saveEmployerAndPosition($scope.title);
-								$location.path('keywords');
+								$location.path('qualities');
 							};
 
 							$scope.list = localStorageService.get('employer');
