@@ -7,7 +7,7 @@
  */
 angular.module('annons-analys').factory('myFactory', function($http) {
 
-	var jobAdUrl = '/v1/urls';
+	var jobAdUrl = 'v1/urls';
     var jobAdEmpPos = 'v1/employer';
     var jobAdKeywords = 'v1/keywords';
 

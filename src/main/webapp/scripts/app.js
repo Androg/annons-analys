@@ -19,7 +19,7 @@ angular.module(
 
 					$routeProvider.when('/', {
 						templateUrl : 'views/main.html',
-						controller : 'MainCtrl',
+						controller : 'MainCtrl'
 					}).when('/post', {
 						templateUrl : 'views/post.html',
 						controller : 'PostCtrl'
@@ -35,11 +35,13 @@ angular.module(
 					}).when('/standouts', {
 						templateUrl : 'views/standouts.html',
 						controller : 'StandsCtrl'
-					})
+					}).when('/main', {
+                        templateUrl : 'views/main.html',
+                        controller : 'MainCtrl'
+                    });
 
 
-					localStorageServiceProvider.setPrefix('annons-analys')
-							.setStorageType('localStorage').setNotify(true,
+					localStorageServiceProvider.setStorageType('localStorage').setNotify(true,
 									true);
 
 
