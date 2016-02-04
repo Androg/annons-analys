@@ -28,23 +28,6 @@ angular.module('annons-analys').controller(
 
                     };
 
-                    $scope.createDoc = function() {
-
-                        var loadFile=function(url,callback){
-                            JSZipUtils.getBinaryContent(url,callback);
-                        };
-                        loadFile('../documents/TheShow.docx' ,function(err,content){
-                            var doc=new Docxgen(content);
-
-                            doc.setData( {"first_name": 'bajset',
-                                    "last_name": 'matadoren'
-                                }
-                            ); //set the templateVariables
-                            doc.render(); //apply them (replace all occurences of {first_name} by Hipp, ...)
-                            var out=doc.getZip().generate({type:"blob"}); //Output the document using Data-URI
-                            saveAs(out,"output.docx")
-                        })
-                    }
 
 
 

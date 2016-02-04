@@ -28,8 +28,36 @@ angular.module('annons-analys').controller(
 
                         myFactory.saveKeywordsToDatabase($scope.allKeywords);
 
-                    }
+                    };
 
                     $scope.theKeywords = localStorageService.get('allKeywords');
+                    $scope.position = localStorageService.get('ls.position');
+                    $scope.employer = localStorageService.get('ls.employer');
+
+
+                    $scope.createDoc = function() {
+
+                        console.log("keywords :" + localStorageService.get('allKeywords') + " position: " +
+                            localStorageService.get('ls.position') + " employer: " + localStorageService.get('ls.employer'));
+
+                        var loadFile = function(url, callback) {
+                            JSZipUtils.getBinaryContent(url,callback);
+                        };
+
+                            loadFile("../documents/applicationMall.docx",function(err,content){
+                            var doc=new Docxgen(content);
+                            doc.setData( {"position": $scope.position,
+                                    "employer": $scope.employer,
+                                    "keywords": $scope.theKeywords.toLocaleString(),
+                                    "info":"New Website"
+                                }
+                            ); //set the templateVariables
+                            doc.render(); //apply them (replace all occurences of {first_name} by Hipp, ...)
+                            var out=doc.getZip().generate({type:"blob"}); //Output the document using Data-URI
+                            saveAs(out,"output.docx")
+                     });
+                    };
+
+
 
 				} ]);

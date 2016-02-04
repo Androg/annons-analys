@@ -35,10 +35,7 @@ angular.module(
 					}).when('/standouts', {
 						templateUrl : 'views/standouts.html',
 						controller : 'StandsCtrl'
-					}).when('/main', {
-                        templateUrl : 'views/main.html',
-                        controller : 'MainCtrl'
-                    });
+					});
 
 
 					localStorageServiceProvider.setStorageType('localStorage').setNotify(true,
