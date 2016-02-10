@@ -21,4 +21,7 @@ public class ServiceConfig
     public KeywordsService keywordsService() {
         return new KeywordsService();
     }
+
+    @Bean
+    public InfoService infoService() { return new InfoService(); }
 }
