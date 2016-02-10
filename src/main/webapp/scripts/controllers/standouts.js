@@ -8,12 +8,12 @@ angular.module('annons-analys').controller(
 				'store',
 				'$location',
 				'localStorageService',
-                'myFactory',
 				function($scope, $http, localStorageService, store,
-						$location, myFactory) {
+						$location) {
 
-					$scope.keywords = localStorageService.get('keywords');
-					$scope.missingkeywords = localStorageService.get('missingkeywords');
+					$scope.allKeywords = localStorageService.get("allKeywords");
+					$scope.info = localStorageService.get('info');
+					
 
 
                     $scope.allKeywords = { keywords: []};
@@ -33,23 +33,21 @@ angular.module('annons-analys').controller(
                     $scope.theKeywords = localStorageService.get('allKeywords');
                     $scope.position = localStorageService.get('ls.position');
                     $scope.employer = localStorageService.get('ls.employer');
+                    $scope.info = localStorageService.get('info');
 
 
                     $scope.createDoc = function() {
-
-                        console.log("keywords :" + localStorageService.get('allKeywords') + " position: " +
-                            localStorageService.get('ls.position') + " employer: " + localStorageService.get('ls.employer'));
 
                         var loadFile = function(url, callback) {
                             JSZipUtils.getBinaryContent(url,callback);
                         };
 
-                            loadFile("../documents/applicationMall.docx",function(err,content){
+                            loadFile("documents/applicationMall.docx",function(err,content){
                             var doc=new Docxgen(content);
                             doc.setData( {"position": $scope.position,
                                     "employer": $scope.employer,
                                     "keywords": $scope.theKeywords.toLocaleString(),
-                                    "info":"New Website"
+                                    "info": $scope.info
                                 }
                             ); //set the templateVariables
                             doc.render(); //apply them (replace all occurences of {first_name} by Hipp, ...)
@@ -57,7 +55,6 @@ angular.module('annons-analys').controller(
                             saveAs(out,"output.docx")
                      });
                     };
-
 
 
 				} ]);

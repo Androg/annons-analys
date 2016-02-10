@@ -5,6 +5,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url(../assets/bower_components/bootstrap/dist/css/bootstrap.css);
+@import url(progress-bar.css);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5142,6 +5144,26 @@ button.close {
 .glyphicon-align-justify:before {
   font-size: x-large; }
 
+#card {
+  border-radius: 1em;
+  width: 21em; }
+
+#txt {
+  word-break: break-all;
+  line-height: 1.3em;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  color: #f5f5f5;
+  width: 13em; }
+
+#welcome-btn {
+  background-color: #373a3c;
+  color: white;
+  margin-top: 36em;
+  width: 9em; }
+
 #accountCreate {
   margin-left: 4em; }
 
@@ -5160,7 +5182,10 @@ button.close {
   word-wrap: break-word; }
 
 #invalidUrl {
-  background-color: #FF0000; }
+  padding: 5px;
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7; }
 
 #alertInvalidUrl {
   margin-right: 10px; }
@@ -5180,9 +5205,9 @@ form {
   margin-left: 1em;
   margin: 0.5em;
   text-align: center;
-  color: black;
+  color: #f5f5f5;
   border-radius: 12px;
-  background-color: lightskyblue; }
+  background-color: #0275d8; }
 
 #page-header {
   background-size: cover;

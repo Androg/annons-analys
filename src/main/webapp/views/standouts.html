@@ -2,26 +2,40 @@
 	<p style="padding: 0.4em;" class="glyphicon glyphicon-align-justify"></p>
 </div>
 
-<div class="container">
-<br />
-<div>
-	<my-progressbar6></my-progressbar6>
-</div>
+<br class="container">
 	<br />
-</div>
-<div id="jobTitle">
-	<br />
-	<p style="margin-left: 1.5em;">
-		Here's what you've come up to so </br> far. Use this when you write
-		your job </br> application or talk with the employer..
-	</p>
-	<br />
-	<ul ng-model="allKeywords">
-			<li ng-repeat="keyword in theKeywords track by $index"
-			id="prio" class="container-fluid">{{keyword}}</li>
+	<div>
+		<my-progressbar8></my-progressbar8>
+	</div>
+	<br /> <br />
+	<div id="jobTitle">
+		<p style="margin-left: 1.5em;">
+			Here's what you've come up to so </br> far. Use this when you write your
+			job </br> application or talk with the employer..
+		</p>
+		<br />
+		<ul style="margin-left: 3em;" ng-model="theKeywords">
+			<li ng-repeat="keyword in theKeywords track by $index" id="prio"
+				class="form-control">{{keyword}}</li>
 		</ul>
 
 
-    <p class="btn btn-primary" ng-click="createDoc()" value="create document">create Doc</p>
+		<br>
+		<div id="card" class="card card-inverse card-primary text-xs-center">
+			<div class="card-block">
+				<blockquote class="card-blockquote">
+					<p id="txt">{{info}}</p>
+				</blockquote>
+			</div>
+		</div>
+
+	</div>
+    <br/>
+    <br/>
+    <br/>
+        <div>
+            <p style="margin-left: 18em">Press this button to get a summarized <br/> document with some help and info what to do next</p>
+           <Button id="txt" style="margin-left: 13.5em; background-color: #FF0000" ng-click="createDoc()" value="Get Document">Get document</Button>
+        </div>
 </div>
 

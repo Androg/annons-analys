@@ -15,23 +15,14 @@ angular.module('annons-analys').controller(
 					var missingKeywords = localStorageService
 							.get('missingkeywords');
 
-                    var theKeys = {keywords : []};
-
 
 					$scope.allKeywords = keywords.concat(missingKeywords);
 
 
 					$scope.done = function() {
-						localStorageService.set('allKeywords', $scope.allKeywords);
+						localStorageService.set('allkeywords', $scope.allKeywords);
 
-                        for(var i = 0; i < $scope.allKeywords.length; i++) {
-                            theKeys.keywords.push($scope.allKeywords[i]);
-                        }
-                        console.log(theKeys);
-                        myFactory.saveKeywordsToDatabase(theKeys);
-
-						$location.path('standouts');
+						$location.path('info');
 					};
 
-                    $scope.theWords = localStorageService.get('allKeywords');
 				} ]);

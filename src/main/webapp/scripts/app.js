@@ -18,7 +18,7 @@ angular.module(
 				function($routeProvider, localStorageServiceProvider) {
 
 					$routeProvider.when('/', {
-						templateUrl : 'views/main.html',
+						templateUrl : 'views/welcome.html',
 						controller : 'MainCtrl'
 					}).when('/post', {
 						templateUrl : 'views/post.html',
@@ -35,11 +35,18 @@ angular.module(
 					}).when('/standouts', {
 						templateUrl : 'views/standouts.html',
 						controller : 'StandsCtrl'
+					}).when('/qualities', {
+						templateUrl : 'views/qualities.html',
+						controller : 'QualityCtrl'
+					}).when('/info', {
+						templateUrl : 'views/info.html',
+						controller : 'InfoCtrl'
+					}).when('/main', {
+						templateUrl : 'views/main.html',
+						controller : 'MainCtrl'
 					});
 
-
-					localStorageServiceProvider.setStorageType('localStorage').setNotify(true,
-									true);
+                    localStorageServiceProvider.setStorageType('localStorage').setNotify(true);
 
 
 		});

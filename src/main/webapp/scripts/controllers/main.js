@@ -25,10 +25,10 @@ angular.module('annons-analys').controller(
                         } else {
                             document.getElementById("invalidUrl").className = "ng-show";
                         }
-
                     };
 
-
-
+                    $scope.start = function () {
+                    	$location.path('main');
+                    }
 
 				} ]);

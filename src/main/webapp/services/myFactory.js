@@ -10,6 +10,7 @@ angular.module('annons-analys').factory('myFactory', function($http) {
 	var jobAdUrl = 'v1/urls';
     var jobAdEmpPos = 'v1/employer';
     var jobAdKeywords = 'v1/keywords';
+    var jobAdInfo = 'v1/info';
 
         return {
             addUrl: function (url) {
@@ -20,6 +21,9 @@ angular.module('annons-analys').factory('myFactory', function($http) {
             },
             saveKeywordsToDatabase: function (keywords) {
                 return $http.post(jobAdKeywords, keywords);
+            },
+            saveInfoToDatabase: function (info) {
+                return $http.post(jobAdInfo, info)
             }
         };
 

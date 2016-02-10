@@ -3,25 +3,24 @@
 </div>
 
 <div class="container">
-<br />
-<div>
-	<my-progressbar5></my-progressbar5>
-</div>
+	<br />
+	<div>
+		<my-progressbar6></my-progressbar6>
+	</div>
 	<br />
 	<div id="jobTitle">
-		<br />
-		<p style="margin-left: 1.5em;">Beautiful, almost done! Order now what you've come up with.
-		 Make the things you think are most important for the service, at the top.<br />
-		 What you think is the least important place at the bottom.
-		<br />
+		<p style="margin-left: 1.5em;">
+			Beautiful, almost done! Order now what you've come up with. Make the
+			things you think are most important for the service, at the top.<br />
+			What you think is the least important place at the bottom. <br />
+			<br>
+		<ul ui-sortable style="margin-left:3em;" ng-model="allKeywords">
+			<li id="prio" class="form-control"
+				ng-repeat="keyword in allKeywords track by $index">{{keyword}}
+				</li>
+				</ul>
 
-		<ul ui-sortable ng-model="theWords">
-			<li id="prio" class="container-fluid"
-				ng-repeat="keyword in theWords track by $index"
-				style="cursor: move;">{{keyword}}</li>
-		</ul>
-
-		<button style="margin-top: 8em;" ng-click="done()" id="confirm"
+		<button style="margin-top: 3em;" ng-click="done()" id="confirm"
 			type="submit" class="btn btn-primary">Confirm and Continue</button>
 
 	</div>
