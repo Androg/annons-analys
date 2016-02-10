@@ -11,6 +11,10 @@ $icon-font-path: "../assets/bower_components/bootstrap-sass-official/assets/font
     font-size: x-large;
 }
 
+#document{
+	color:white;
+}
+
 #card {
   border-radius: 1em;
   width: 21em;
@@ -206,18 +210,40 @@ body {
   .container {
     max-width: 730px;
     }
+  #menu{
+   max-width: 730px;
+   } 
+    .box, .large, .left{
+  	margin-left: 0px;
+  	max-width: 730px;  
+  }
   }
   
   @media screen and (min-width: 320px) {
   .container {
     max-width: 568px;
     }
+  #menu{
+   max-width: 179px;
+   } 
+  .box, .large, .left{
+  	margin-left: -159px;
+  	max-width: 317px;  
+  }
+  
 }
   
     @media screen and (min-width: 960px) {
    #description{
     max-width: 640px;
     }
+   #menu{
+   max-width: 92.8em;
+   } 
+    .box, .large, .left{
+  	margin-left: 0px;
+  	max-width: 568px;  
+  }
   } 
   
 

@@ -2,7 +2,7 @@
 	<p style="padding: 0.4em;" class="glyphicon glyphicon-align-justify"></p>
 </div>
 
-<br class="container">
+<div class="container">
 	<br />
 	<div>
 		<my-progressbar8></my-progressbar8>
@@ -29,13 +29,16 @@
 			</div>
 		</div>
 
+		<br />
+		<p style="margin-left: 1.5em">
+			Press this button to get a summarized <br /> document with some help
+			and info what to do next
+		</p>
+		<Button class="btn btn-primary" style="margin-left: 5.8em;"
+			ng-click="createDoc()" value="Get Document">
+			Get your Report<br /> <span class="glyphicon glyphicon-paperclip"
+				aria-hidden="true"></span>
+		</Button>
 	</div>
-    <br/>
-    <br/>
-    <br/>
-        <div>
-            <p style="margin-left: 18em">Press this button to get a summarized <br/> document with some help and info what to do next</p>
-           <Button id="txt" style="margin-left: 13.5em; background-color: #FF0000" ng-click="createDoc()" value="Get Document">Get document</Button>
-        </div>
 </div>
 
