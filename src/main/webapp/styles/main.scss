@@ -3,6 +3,7 @@ $icon-font-path: "../assets/bower_components/bootstrap-sass-official/assets/font
 @import "../assets/bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 @import "../assets/bower_components/bootstrap/dist/css/bootstrap.css";
 @import "progress-bar.css";
+@import "side-menu.css";
 
 
 // endbower
@@ -47,7 +48,7 @@ color: white;
 
 
 #confirm {
-	margin-left: 4.5em;
+	margin-left: 3.5em;
 }
 #jobPost{
 	margin-top: 50px;

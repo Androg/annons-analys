@@ -1,27 +1,27 @@
 <div id="page-header">
-	<h1>You've found a job you really want, discover the best messages
-		for your job application</h1>
+	<h1>Du har hittat ett jobb du verkligen vill , upptäcka de bästa
+		meddelanden för din ansökan</h1>
 </div>
 <br />
 
-
 <div class="container">
-<div>
-<my-progressbar></my-progressbar>
-</div>
+	<my-progressbar></my-progressbar>
 
 	<div id="jobPost">
 		<form name="jobPostForm" ng-submit="validateURL(url.url)">
-		<div role="form">
+			<div role="form">
 				<label for="jobPost">Job Post</label> <input placeholder="url"
 					type="text" class="form-control input-sm" ng-model="url.url"
 					required />
-            <p id="invalidUrl" class="ng-hide"><span id="alertInvalidUrl" class="glyphicon glyphicon-alert"></span>Please enter a valid url!</p>
+				<p id="invalidUrl" class="ng-hide">
+					<span id="alertInvalidUrl" class="glyphicon glyphicon-alert"></span>Please
+					enter a valid url!
+				</p>
 				<p class="alert alert-danger"
 					ng-show="jobPostForm.url.$error.required"
 					class="alert alert-warning">Required</p>
-				<input id="btn" type="submit" value="Continue" class="btn btn-primary"
-					ng-disabled="jobPostForm.$invalid" />
+				<input id="btn" type="submit" value="Gå Vidare"
+					class="btn btn-primary" ng-disabled="jobPostForm.$invalid" />
 			</div>
 		</form>
 

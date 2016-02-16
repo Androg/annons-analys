@@ -7,6 +7,7 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import url(../assets/bower_components/bootstrap/dist/css/bootstrap.css);
 @import url(progress-bar.css);
+@import url(side-menu.css);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5171,7 +5172,7 @@ button.close {
   margin-left: 4em; }
 
 #confirm {
-  margin-left: 4.5em; }
+  margin-left: 3.5em; }
 
 #jobPost {
   margin-top: 50px; }
