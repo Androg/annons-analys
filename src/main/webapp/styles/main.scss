@@ -3,6 +3,7 @@ $icon-font-path: "../assets/bower_components/bootstrap-sass-official/assets/font
 @import "../assets/bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 @import "../assets/bower_components/bootstrap/dist/css/bootstrap.css";
 @import "progress-bar.css";
+@import "side-menu.css";
 
 
 // endbower
@@ -47,7 +48,7 @@ color: white;
 
 
 #confirm {
-	margin-left: 4.5em;
+	margin-left: 3.5em;
 }
 #jobPost{
 	margin-top: 50px;
@@ -198,52 +199,34 @@ body {
     
   }
 
-  @media screen and (min-width: 960px) {
-    width: 960px;
-  }
-  
-}
-
 
 /* Responsive: Portrait tablets and up */
   @media screen and (min-width: 768px) {
   .container {
     max-width: 730px;
     }
-  #menu{
-   max-width: 730px;
+   .box, .large, .left {
+   	left:auto
    } 
-    .box, .large, .left{
-  	margin-left: 0px;
-  	max-width: 730px;  
-  }
   }
   
   @media screen and (min-width: 320px) {
   .container {
     max-width: 568px;
     }
-  #menu{
-   max-width: 179px;
+      .box, .large, .left {
+   	left:auto
    } 
-  .box, .large, .left{
-  	margin-left: -159px;
-  	max-width: 317px;  
   }
   
-}
   
     @media screen and (min-width: 960px) {
    #description{
     max-width: 640px;
     }
-   #menu{
-   max-width: 92.8em;
+      .box, .large, .left {
+   	left:auto
    } 
-    .box, .large, .left{
-  	margin-left: 0px;
-  	max-width: 568px;  
-  }
   } 
   
 
@@ -262,4 +245,5 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+ }
 

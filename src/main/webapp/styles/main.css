@@ -7,6 +7,7 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import url(../assets/bower_components/bootstrap/dist/css/bootstrap.css);
 @import url(progress-bar.css);
+@import url(side-menu.css);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5171,7 +5172,7 @@ button.close {
   margin-left: 4em; }
 
 #confirm {
-  margin-left: 4.5em; }
+  margin-left: 3.5em; }
 
 #jobPost {
   margin-top: 50px; }
@@ -5277,61 +5278,40 @@ body {
     margin-top: 28px; }
 
 .container {
-  padding: 0 1em; }
+  padding: 0 1em;
+  /* Responsive: Portrait tablets and up */
+  /* Remove the padding we set earlier */
+  /* Space out the masthead */
+  /* Remove the bottom border on the jumbotron for visual effect */ }
   @media screen and (min-width: 640px) {
     .container {
       width: 640px;
       padding-left: 0;
       padding-right: 0;
       margin: 0 auto; } }
+  @media screen and (min-width: 768px) {
+    .container .container {
+      max-width: 730px; }
+    .container .box, .container .large, .container .left {
+      left: auto; } }
+  @media screen and (min-width: 320px) {
+    .container .container {
+      max-width: 568px; }
+    .container .box, .container .large, .container .left {
+      left: auto; } }
   @media screen and (min-width: 960px) {
-    .container {
-      width: 960px; } }
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px; }
-
-  #menu {
-    max-width: 730px; }
-
-  .box, .large, .left {
-    margin-left: 0px;
-    max-width: 730px; } }
-@media screen and (min-width: 320px) {
-  .container {
-    max-width: 568px; }
-
-  #menu {
-    max-width: 179px; }
-
-  .box, .large, .left {
-    margin-left: -159px;
-    max-width: 317px; } }
-@media screen and (min-width: 960px) {
-  #description {
-    max-width: 640px; }
-
-  #menu {
-    max-width: 92.8em; }
-
-  .box, .large, .left {
-    margin-left: 0px;
-    max-width: 568px; } }
-/* Remove the padding we set earlier */
-.header,
-.marketing,
-.footer {
-  padding-left: 0;
-  padding-right: 0; }
-
-/* Space out the masthead */
-.header {
-  margin-bottom: 30px; }
-
-/* Remove the bottom border on the jumbotron for visual effect */
-.jumbotron {
-  border-bottom: 0; }
+    .container #description {
+      max-width: 640px; }
+    .container .box, .container .large, .container .left {
+      left: auto; } }
+  .container .header,
+  .container .marketing,
+  .container .footer {
+    padding-left: 0;
+    padding-right: 0; }
+  .container .header {
+    margin-bottom: 30px; }
+  .container .jumbotron {
+    border-bottom: 0; }
 
 /*# sourceMappingURL=main.css.map */

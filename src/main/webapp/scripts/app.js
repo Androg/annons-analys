@@ -44,6 +44,9 @@ angular.module(
 					}).when('/main', {
 						templateUrl : 'views/main.html',
 						controller : 'MainCtrl'
+					}).when('/side', {
+						templateUrl : 'views/side.html',
+						controller : 'modalDemo'
 					});
 
                     localStorageServiceProvider.setStorageType('localStorage').setNotify(true);
