@@ -17,6 +17,17 @@
 					<span id="alertInvalidUrl" class="glyphicon glyphicon-alert"></span>Please
 					enter a valid url!
 				</p>
+                <br />
+                <br />
+                    <p>Position du är ute efter</p>
+                    <input placeholder="Project Manager" ng-model="url.title"
+                           type="text" class="form-control input-sm" required><br />
+                    <br />
+                    <p>Arbetsgivare</p>
+                    <input placeholder={{employer}} ng-model="url.employer"
+                           type="text" class="form-control input-sm" required>
+
+
 				<p class="alert alert-danger"
 					ng-show="jobPostForm.url.$error.required"
 					class="alert alert-warning">Required</p>

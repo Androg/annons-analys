@@ -12,13 +12,8 @@ public final class JobAdsService {
 	private JobAdsRepository jobAdsRepository;
 
 	public JobAd createJobAd(JobAd jobAd) {
-		JobAd createdJobAd = new JobAd(jobAd.getUrl());
+		JobAd createdJobAd = new JobAd(jobAd.getUrl(), jobAd.getTitle(), jobAd.getEmployer());
 		return jobAdsRepository.save(createdJobAd);
-	}
-
-	public JobAd saveTitleToDatabase(String title) {
-		JobAd jobAdTitle = new JobAd(title);
-		return jobAdsRepository.save(jobAdTitle);
 	}
 
 	public JobAd findJobAd(int id) {

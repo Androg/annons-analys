@@ -20,9 +20,6 @@ angular.module(
 					$routeProvider.when('/', {
 						templateUrl : 'views/welcome.html',
 						controller : 'MainCtrl'
-					}).when('/post', {
-						templateUrl : 'views/post.html',
-						controller : 'PostCtrl'
 					}).when('/keywords', {
 						templateUrl : 'views/keywords.html',
 						controller : 'KeysCtrl'
@@ -44,9 +41,6 @@ angular.module(
 					}).when('/main', {
 						templateUrl : 'views/main.html',
 						controller : 'MainCtrl'
-					}).when('/side', {
-						templateUrl : 'views/side.html',
-						controller : 'modalDemo'
 					});
 
                     localStorageServiceProvider.setStorageType('localStorage').setNotify(true);
