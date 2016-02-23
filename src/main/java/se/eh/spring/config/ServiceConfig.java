@@ -13,11 +13,6 @@ public class ServiceConfig
     }
 
     @Bean
-    public EmployerService employerService() {
-        return new EmployerService();
-    }
-
-    @Bean
     public KeywordsService keywordsService() {
         return new KeywordsService();
     }

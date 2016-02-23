@@ -37,7 +37,7 @@ public final class JobAdResource {
 	public final Response createUrl(@Context UriInfo uriInfo, JobAd jobAd) throws IOException {
 		JobAd result = service.createJobAd(jobAd);
 		if (result != null) {
-			URI uri = uriInfo.getAbsolutePathBuilder().path(result.getUrl()).build();
+			URI uri = uriInfo.getAbsolutePathBuilder().path(String.valueOf(result)).build();
 			return Response.created(uri).entity(result).build();
 		}
 		throw new BadRequestException();

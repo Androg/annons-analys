@@ -6,7 +6,6 @@
 
 <div class="container">
 	<my-progressbar></my-progressbar>
-
 	<div id="jobPost">
 		<form name="jobPostForm" ng-submit="validateURL(url.url)">
 			<div role="form">
@@ -17,6 +16,17 @@
 					<span id="alertInvalidUrl" class="glyphicon glyphicon-alert"></span>Please
 					enter a valid url!
 				</p>
+                <br />
+                <br />
+                    <p>Position du är ute efter</p>
+                    <input placeholder="Project Manager" ng-model="url.title"
+                           type="text" class="form-control input-sm" required><br />
+                    <br />
+                    <p>Arbetsgivare</p>
+                    <input placeholder={{employer}} ng-model="url.employer"
+                           type="text" class="form-control input-sm" required>
+
+
 				<p class="alert alert-danger"
 					ng-show="jobPostForm.url.$error.required"
 					class="alert alert-warning">Required</p>
@@ -24,6 +34,27 @@
 					class="btn btn-primary" ng-disabled="jobPostForm.$invalid" />
 			</div>
 		</form>
+
+
+        <button ng-click="testing">Show Left Menu!</button>
+
+        <div class="container">
+                <div id="sidebar" class="sidebar">
+                    <a id="navigation-toggle" ng-click="toggleState()">Navigation</a>
+                    <ul class="navigation">
+                        <li class="navigation-items"> <a href="#">Link1</br> heeeej {{keywords}}</a>
+                        </li>
+                        <li class="navigation-items"> <a href="#">Link2</a>
+                        </li>
+                        <li class="navigation-items"> <a href="#">Link3</a>
+                        </li>
+                        <li class="navigation-items"> <a href="#">Link4</a>
+                        </li>
+                        <li class="navigation-items"> <a href="#">Link4</a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
 
 	</div>
 </div>
