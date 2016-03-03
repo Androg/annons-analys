@@ -1,5 +1,5 @@
 <div id="page-header">
-	<p style="padding: 0.4em;" class="glyphicon glyphicon-align-justify"></p>
+	<p style="padding: 0.4em; height: 2em;"></p>
 </div>
 
 <br />
@@ -18,7 +18,7 @@
 		för försäljning är inte egenskaper).
 	</p>
 	<br />
-	<div id="cards" class="card text-xs-center">
+	<div>
 		<!-- keyword input -->
 		<form role="form" ng-submit="addKeyword()">
 			<div class="row">
@@ -43,11 +43,14 @@
 						ng-click="removeKeyword ($index)" aria-label="Remove">X</button>
 				</span>
 			</p>
-			<button style="margin-top: 2em;" ng-click="nextView()" id="confirm"
+			<button style="margin-top: 2em; margin-left: 4.5em" ng-click="nextView()" id="confirm"
 				type="submit" class="btn btn-primary">Bekräfta och Gå
 				Vidare</button>
 			<br />
-			<p style="margin-left: -1em;">Lägg till 3+ för att fortsätta</p>
+			<p style="margin-left: 4.5em;">Lägg till 3+ för att fortsätta</p>
+		<my-sidebar3></my-sidebar3>
 		</div>
 	</div>
 </div>
+<br />
+<div class="footer"></div>

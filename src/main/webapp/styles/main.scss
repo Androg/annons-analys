@@ -11,6 +11,53 @@ $icon-font-path: "../assets/bower_components/bootstrap-sass-official/assets/font
     font-size: x-large;
 }
 
+.sidebar {
+	position: absolute;
+	top: 0;
+	left: -307px;;
+	transition: 100ms left;
+}
+
+#chkbox {
+	margin-left: 12em;
+	color: rgb(210, 210, 30);
+}
+
+#navigation-toggle {
+    top: -19px;
+	position : absolute;
+    left : 290px;
+    color : white;
+    text-decoration : none;
+    padding : 20px;
+}
+
+.show {
+	left: 0;
+}
+
+.navigation {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.navigation-items a {
+	border: 1px solid black;
+	display: block;
+	background-color: snow;
+	color: black;
+	line-height: 2em;
+	text-decoration: none;
+	padding: 10px 30px;
+	width: 307px;
+	height: 107.8px;
+}
+
+.navigation-items a:hover {
+	background-color: #222;
+}
+
 #document{
 	color:white;
 }
@@ -216,19 +263,47 @@ body {
    .box, .large, .left {
    	left:auto
    } 
+   .navigation-items a {
+	width: 307px;
+	height: 107.8px;
+}
+#navigation-toggle {
+	position : absolute;
+    left : 290px;
+}
   }
   
   @media screen and (min-width: 320px) {
   .container {
     max-width: 568px;
     }
-      .box, .large, .left {
-   	left:auto
-   } 
+      .box  {
+   	left:auto;
+   	width: 302px;
+   	}
+   	#welcome{
+   	font-size: 49px;
+   	}
+  .navigation-items a {
+	width: 285px;
+    height: 68.5px;
+}
+#navigation-toggle {
+	position : fixed;
+    left : 274px;
+}
   }
   
   
     @media screen and (min-width: 960px) {
+       .navigation-items a {
+	width: 307px;
+	height: 107.8px;
+}
+#navigation-toggle {
+	position : absolute;
+    left : 290px;
+}
    #description{
     max-width: 640px;
       word-break: break-all;
@@ -239,8 +314,11 @@ body {
   	  font-weight: 400;
   	  width: 42em;
     }
-      .box, .large, .left {
-   	left:auto
+      .box {
+   	left:auto;
+   	width:500px;
+   	#welcome {
+   	font-size: 60px;
    } 
   } 
   
@@ -259,7 +337,7 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
-  }
  }
- 
+ }
+ }
 

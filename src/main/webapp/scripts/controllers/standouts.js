@@ -55,6 +55,20 @@ angular.module('annons-analys').controller(
                             saveAs(out,"output.docx")
                      });
                     };
+                    
+                	$scope.toggleState = function() {
+						$scope.state = !$scope.state;
+						if ($scope.state === true) {
+							console.log($scope.state);
+							document.getElementById("sidebar").classList
+									.add("show");
+						} else {
+							console.log($scope.state);
+							document.getElementById("sidebar").classList
+									.remove("show");
+						}
+
+					};
 
 
 				} ]);
