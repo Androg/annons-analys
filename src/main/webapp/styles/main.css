@@ -5334,8 +5334,6 @@ body {
       padding-right: 0;
       margin: 0 auto; } }
   @media screen and (min-width: 768px) {
-    .container .container {
-      max-width: 730px; }
     .container .box, .container .large, .container .left {
       left: auto; }
     .container .navigation-items a {
@@ -5345,8 +5343,6 @@ body {
       position: absolute;
       left: 290px; } }
   @media screen and (min-width: 320px) {
-    .container .container {
-      max-width: 568px; }
     .container .box {
       left: auto;
       width: 302px; }

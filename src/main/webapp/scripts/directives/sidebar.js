@@ -5,7 +5,6 @@ angular
 				function() {
 					return {
 						template : '<div>'
-								+ '<div class="container">'
 								+ '<div id="sidebar" class="sidebar">'
 								+ '<span class="glyphicon glyphicon-align-justify" id="navigation-toggle" ng-click="toggleState()"></span>'
 								+ '<ul class="navigation">'
@@ -16,7 +15,7 @@ angular
 								+ '<li class="navigation-items"><a href="#prioritize">Step 5<span id="chkbox" class="glyphicon glyphicon-star-empty"></a></li>'
 								+ '<li class="navigation-items"><a href="#info">Step 6<span id="chkbox" class="glyphicon glyphicon-star-empty"></a></li>'
 								+ '<li class="navigation-items"><a href="#standouts">Step 7<span id="chkbox" class="glyphicon glyphicon-star-empty"></a></li>'
-								+ '</ul>' + '</div>' + '</div>',
+								+ '</ul>' + '</div>',
 
 						restrict : 'E',
 						link : function postLink(scope, element, attrs) {
@@ -28,7 +27,6 @@ angular
      function() {
 		return {
 			template : '<div>'
-				+ '<div class="container">'
 				+ '<div id="sidebar" class="sidebar">'
 				+ '<span class="glyphicon glyphicon-align-justify" id="navigation-toggle" ng-click="toggleState()"></span>'
 				+ '<ul class="navigation">'
@@ -39,7 +37,7 @@ angular
 				+ '<li class="navigation-items"><a href="#prioritize">Step 5<span id="chkbox" class="glyphicon glyphicon-star-empty"></a></li>'
 				+ '<li class="navigation-items"><a href="#info">Step 6<span id="chkbox" class="glyphicon glyphicon-star-empty"></a></li>'
 				+ '<li class="navigation-items"><a href="#standouts">Step 7<span id="chkbox" class="glyphicon glyphicon-star-empty"></a></li>'
-				+ '</ul>' + '</div>' + '</div>',
+				+ '</ul>' + '</div>',
 
 						restrict : 'E',
 						link : function postLink(scope, element, attrs) {
@@ -51,7 +49,6 @@ angular
 		function() {
 			return {
 				template : '<div>'
-						+ '<div class="container">'
 						+ '<div id="sidebar" class="sidebar">'
 						+ '<span class="glyphicon glyphicon-align-justify" id="navigation-toggle" ng-click="toggleState()"></span>'
 						+ '<ul class="navigation">'
@@ -62,7 +59,7 @@ angular
 						+ '<li class="navigation-items"><a href="#prioritize">Step 5<span id="chkbox" class="glyphicon glyphicon-star-empty"></a></li>'
 						+ '<li class="navigation-items"><a href="#info">Step 6<span id="chkbox" class="glyphicon glyphicon-star-empty"></a></li>'
 						+ '<li class="navigation-items"><a href="#standouts">Step 7<span id="chkbox" class="glyphicon glyphicon-star-empty"></a></li>'
-						+ '</ul>' + '</div>' + '</div>',
+						+ '</ul>' + '</div>',
 
 				restrict : 'E',
 				link : function postLink(scope, element, attrs) {
@@ -74,7 +71,7 @@ angular
 		function() {
 			return {
 				template : '<div>'
-						+ '<div class="container">'
+
 						+ '<div id="sidebar" class="sidebar">'
 						+ '<span class="glyphicon glyphicon-align-justify" id="navigation-toggle" ng-click="toggleState()"></span>'
 						+ '<ul class="navigation">'
@@ -85,7 +82,7 @@ angular
 						+ '<li class="navigation-items"><a href="#prioritize">Step 5<span id="chkbox" class="glyphicon glyphicon-star-empty"></a></li>'
 						+ '<li class="navigation-items"><a href="#info">Step 6<span id="chkbox" class="glyphicon glyphicon-star-empty"></a></li>'
 						+ '<li class="navigation-items"><a href="#standouts">Step 7<span id="chkbox" class="glyphicon glyphicon-star-empty"></a></li>'
-						+ '</ul>' + '</div>' + '</div>',
+						+ '</ul>' + '</div>',
 
 				restrict : 'E',
 				link : function postLink(scope, element, attrs) {
@@ -97,7 +94,6 @@ angular
 		function() {
 			return {
 				template : '<div>'
-						+ '<div class="container">'
 						+ '<div id="sidebar" class="sidebar">'
 						+ '<span class="glyphicon glyphicon-align-justify" id="navigation-toggle" ng-click="toggleState()"></span>'
 						+ '<ul class="navigation">'
@@ -108,7 +104,7 @@ angular
 						+ '<li class="navigation-items"><a href="#prioritize">Step 5<span id="chkbox" class="glyphicon glyphicon-star"></a></li>'
 						+ '<li class="navigation-items"><a href="#info">Step 6<span id="chkbox" class="glyphicon glyphicon-star-empty"></a></li>'
 						+ '<li class="navigation-items"><a href="#standouts">Step 7<span id="chkbox" class="glyphicon glyphicon-star-empty"></a></li>'
-						+ '</ul>' + '</div>' + '</div>',
+						+ '</ul>' + '</div>',
 
 				restrict : 'E',
 				link : function postLink(scope, element, attrs) {
@@ -120,7 +116,6 @@ angular
 		function() {
 			return {
 				template : '<div>'
-						+ '<div class="container">'
 						+ '<div id="sidebar" class="sidebar">'
 						+ '<span class="glyphicon glyphicon-align-justify" id="navigation-toggle" ng-click="toggleState()"></span>'
 						+ '<ul class="navigation">'
@@ -131,7 +126,7 @@ angular
 						+ '<li class="navigation-items"><a href="#prioritize">Step 5<span id="chkbox" class="glyphicon glyphicon-star"></a></li>'
 						+ '<li class="navigation-items"><a href="#info">Step 6<span id="chkbox" class="glyphicon glyphicon-star"></a></li>'
 						+ '<li class="navigation-items"><a href="#standouts">Step 7<span id="chkbox" class="glyphicon glyphicon-star-empty"></a></li>'
-						+ '</ul>' + '</div>' + '</div>',
+						+ '</ul>' + '</div>',
 
 				restrict : 'E',
 				link : function postLink(scope, element, attrs) {
@@ -143,7 +138,6 @@ angular
 		function() {
 			return {
 				template : '<div>'
-						+ '<div class="container">'
 						+ '<div id="sidebar" class="sidebar">'
 						+ '<span class="glyphicon glyphicon-align-justify" id="navigation-toggle" ng-click="toggleState()"></span>'
 						+ '<ul class="navigation">'
@@ -154,7 +148,7 @@ angular
 						+ '<li class="navigation-items"><a href="#prioritize">Step 5<span id="chkbox" class="glyphicon glyphicon-star"></a></li>'
 						+ '<li class="navigation-items"><a href="#info">Step 6<span id="chkbox" class="glyphicon glyphicon-star"></a></li>'
 						+ '<li class="navigation-items"><a href="#standouts">Step 7<span id="chkbox" class="glyphicon glyphicon-star"></a></li>'
-						+ '</ul>' + '</div>' + '</div>',
+						+ '</ul>' + '</div>',
 
 				restrict : 'E',
 				link : function postLink(scope, element, attrs) {
