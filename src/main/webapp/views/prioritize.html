@@ -11,13 +11,11 @@
 			Beautiful, almost done! Order now what you've come up with. Make the
 			things you think are most important for the service, at the top.<br />
 			What you think is the least important place at the bottom. <br /> <br>
-		<ul ui-sortable style="margin-left: 3em;" ng-model="allKeywords">
-			<li id="prio" class="form-control"
-				ng-repeat="keyword in allKeywords track by $index">{{keyword}}
-			</li>
+		<ul id="wordlist" ui-sortable style="margin-left: 3em;" ng-model="allKeywords">
+			<li class="form-control prio" ng-repeat="keyword in allKeywords track by $index">{{keyword}}</li>
 		</ul>
 
-		<button style="margin-top: 3em; margin-left: 4em" ng-click="done()"
+		<button id="button" style="margin-top: 3em; margin-left: 4em" ng-click="done()"
 			type="submit" class="btn btn-primary">Bekräfta och Gå Vidare</button>
 
 		<my-sidebar5></my-sidebar5>

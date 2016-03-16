@@ -15,12 +15,20 @@ angular.module('annons-analys').controller(
 					var missingKeywords = localStorageService
 							.get('missingkeywords');
 
+                    var newWords = [];
+
 
 					$scope.allKeywords = keywords.concat(missingKeywords);
 
 
 					$scope.done = function() {
-						localStorageService.set('allkeywords', $scope.allKeywords);
+                        var $wordlistitems = $("#wordlist").children();
+                        $wordlistitems.each(function() {
+                            var currentLi = this;
+                            newWords.push(currentLi.innerHTML);
+                        });
+
+						localStorageService.set('allKeywords', newWords);
 
 						$location.path('info');
 					};

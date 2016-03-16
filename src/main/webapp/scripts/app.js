@@ -31,7 +31,10 @@ angular.module(
 			}).when('/main', {
 				templateUrl : 'views/main.html',
 				controller : 'MainCtrl'
-			});
+			}).when('/iframe', {
+                templateUrl : 'views/iframe.html',
+                controller : 'IframeCtrl'
+            });
 
 			localStorageServiceProvider.setStorageType('localStorage')
 					.setNotify(true);
